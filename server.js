@@ -6,7 +6,7 @@ const express = require("express"); // import express
 const morgan = require("morgan"); //import morgan
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
-const path = require("path")
+const path = require("path");
 
 /////////////////////////////////////////////
 // Database Connection
@@ -26,3 +26,43 @@ mongoose.connection
   .on("open", () => console.log("Connected to Mongoose"))
   .on("close", () => console.log("Disconnected from Mongoose"))
   .on("error", (error) => console.log(error));
+
+  ////////////////////////////////////////////////
+// Models
+////////////////////////////////////////////////
+// pull schema and model from mongoose
+const { Schema, model } = mongoose;
+
+// make Player Schema
+const PlayerSchema = new Schema({
+  Player: String,
+  Country: String,
+  Post: Array,
+  Stats: {
+      ppg: Number,
+      apg: Number,
+      rpg: Number,
+      stp:Number,
+  }
+});
+
+//makle Posts Schema
+const PostSchema = new Schema({
+    Player: String,
+    Stats: {
+        ppg: Number,
+        apg: Number,
+        rpg: Number,
+        stp:Number,
+    },
+    PostOwner: String,
+    Comments: Array,
+}, {
+    timestamps: true
+})
+
+
+
+// make models
+const Player = model("Player", PlayerSchema)
+const Post = model("Post", PostSchema);

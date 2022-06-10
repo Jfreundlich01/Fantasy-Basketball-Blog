@@ -27,7 +27,7 @@ mongoose.connection
   .on("close", () => console.log("Disconnected from Mongoose"))
   .on("error", (error) => console.log(error));
 
-  ////////////////////////////////////////////////
+////////////////////////////////////////////////
 // Models
 ////////////////////////////////////////////////
 // pull schema and model from mongoose
@@ -61,8 +61,34 @@ const PostSchema = new Schema({
     timestamps: true
 })
 
-
-
 // make models
 const Player = model("Player", PlayerSchema)
 const Post = model("Post", PostSchema);
+
+/////////////////////////////////////////////////
+// Create our Express Application Object Bind Liquid Templating Engine
+/////////////////////////////////////////////////
+const app = require("liquid-express-views")(express(), {root: [path.resolve(__dirname, 'views/')]})
+
+
+/////////////////////////////////////////////////////
+// Middleware
+/////////////////////////////////////////////////////
+app.use(morgan("tiny")); //logging
+app.use(methodOverride("_method")); // override for put and delete requests from forms
+app.use(express.urlencoded({ extended: true })); // parse urlencoded request bodies
+app.use(express.static("public")); // serve files from public statically
+
+////////////////////////////////////////////
+// Routes
+////////////////////////////////////////////
+
+app.get("/", (req, res) => {
+    res.send("you ran your route.");
+  });
+
+//////////////////////////////////////////////
+// Server Listener
+//////////////////////////////////////////////
+const PORT = process.env.PORT;
+app.listen(PORT, () => console.log(`Now Listening on port ${PORT}`));

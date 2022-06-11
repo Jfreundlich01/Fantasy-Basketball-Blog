@@ -9,25 +9,8 @@ const mongoose = require("./models/connection.js");
 const path = require("path");
 const players = require("./seed.js");
 const Player = require("./models/playersM.js")
+const Post = require("./models/postsM.js")
 
-////////////////////////////////////////////////
-// Models
-////////////////////////////////////////////////
-// pull schema and model from mongoose
-const { Schema, model } = mongoose;
-
-//makle Posts Schema
-const PostSchema = new Schema({
-    title: String,
-    name: String,
-    postOwner: String,
-    postBody: String,
-    comments: Array,
-}, {
-    timestamps: true
-})
-
-const Post = model("Post", PostSchema);
 
 /////////////////////////////////////////////////
 // Create our Express Application Object Bind Liquid Templating Engine

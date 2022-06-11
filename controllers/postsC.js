@@ -40,7 +40,7 @@ router.get("/", (req, res) => {
 
   
   
-  ///// new route /////////////
+  ///// new  /////////////
   router.get("/new", (req, res) => {
     Player.find({})
     .then((players) => {
@@ -62,11 +62,13 @@ router.get("/", (req, res) => {
               res.json({error})
           });
   });
+
   router.post("/", (req,res) =>{
     let newPost = {
       title: `${req.body.name} Outlook`,
       name: req.body.name,
-      postBody: req.body.postBody
+      postBody: req.body.postBody,
+      postOwner: req.session.username
     }
     Post.create(newPost).then((data) => {
       console.log(data)

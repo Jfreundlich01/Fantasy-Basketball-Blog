@@ -7,7 +7,8 @@ const morgan = require("morgan"); //import morgan
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const path = require("path");
-const players = require("./seed.js")
+const players = require("./seed.js");
+const { stringify } = require("querystring");
 
 /////////////////////////////////////////////
 // Database Connection
@@ -42,13 +43,8 @@ const PlayerSchema = new Schema({
 
 //makle Posts Schema
 const PostSchema = new Schema({
-    Player: String,
-    Stats: {
-        ppg: Number,
-        apg: Number,
-        rpg: Number,
-        stp:Number,
-    },
+    firstName: String,
+    lastNAme: String,
     PostOwner: String,
     Comments: Array,
 }, {
@@ -81,7 +77,7 @@ app.get("/", (req, res) => {
     res.send("you ran your route.");
   });
 
-//Seed
+// Players Seed
 app.get("/players/seed", (req, res) => {
     
     // Delete all Players
@@ -93,7 +89,17 @@ app.get("/players/seed", (req, res) => {
       });
     });
   });
+
   
+
+
+ 
+
+ // new route
+app.get("/new", (req, res) => {
+    res.render("new");
+  });
+   
 //////////////////////////////////////////////
 // Server Listener
 //////////////////////////////////////////////

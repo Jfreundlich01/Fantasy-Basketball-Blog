@@ -13,6 +13,7 @@ const { Schema, model } = mongoose;
 const PostSchema = new Schema({
     title: String,
     name: String,
+    image: String,
     postOwner: String,
     postBody: String,
     comments: Array,

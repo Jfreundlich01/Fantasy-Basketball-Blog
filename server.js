@@ -11,6 +11,7 @@ const players = require("./seed.js");
 const Player = require("./models/playersM.js")
 const Post = require("./models/postsM.js")
 const router = require("./controllers/postsC.js")
+const UserRouter = require("./controllers/userC.js");
 
 
 /////////////////////////////////////////////////
@@ -31,6 +32,14 @@ app.use(express.static("public")); // serve files from public statically
 // connect router
 ////////////////////////////////
 app.use("", router)
+app.use("/user", UserRouter)
+
+///////////////////////////////
+// Routes
+///////////////////////////////
+app.get("/", (req, res) => {
+    res.render("home");
+  });
 
 //////////////////////////////////////////////
 // Server Listener

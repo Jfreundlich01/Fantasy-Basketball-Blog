@@ -15,9 +15,6 @@ const router = express.Router()
 // Routes
 ////////////////////////////////////////////
 
-router.get("/", (req, res) => {
-    res.send("you ran your route.");
-  });
 
 ////// index route ///////////
 router.get("/index", (req, res) => {

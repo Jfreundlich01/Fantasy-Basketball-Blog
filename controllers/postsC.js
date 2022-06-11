@@ -19,19 +19,6 @@ router.get("/", (req, res) => {
     res.send("you ran your route.");
   });
 
-//// Players Seed ////////
-router.get("/players/seed", (req, res) => {
-    
-    // Delete all Players
-    Player.deleteMany({}).then((data) => {
-      // Seed Starter Players
-      Player.create(players).then((data) => {
-        // send created players as response to confirm creation
-        res.json(data);
-      });
-    });
-  });
-
 // Post Seed ///////
 starterPosts = [
     {title:"Lebron James Outlook",name: "Lebron James" , postOwner: "JFREUNDLICH", postBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",comments: []},

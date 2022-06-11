@@ -29,7 +29,7 @@ router.post("/signup", async (req, res) => {
     User.create(req.body)
       .then((user) => {
         // redirect to login page
-        res.redirect("/user/login");
+        res.redirect("user/login");
       })
       .catch((error) => {
         // send error as json
@@ -58,7 +58,7 @@ router.post("/login", async (req, res) => {
             req.session.username = username;
             req.session.loggedIn = true;
             // redirect to index page if successful
-            res.redirect("/index");
+            res.redirect("/home");
           } else {
             // error if password doesn't match
             res.json({ error: "password doesn't match" });

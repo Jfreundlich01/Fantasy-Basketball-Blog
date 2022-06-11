@@ -20,7 +20,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="/index"><a class="nav-link" href="#">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#!">Profile</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Logout</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../user/logout">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                                         <div class="small text-muted">{{post.timestamp}}</div>
                                         <h2 class="card-title h4">{{post.title}}</h2>
                                         <p class="card-text">{{post.postBody | slice: 0, 300}}</p>
-                                        <a class="btn btn-primary" href="/index/{{post._id}}">Read more →</a>
+                                        <a class="btn btn-primary" href="/home/{{post._id}}">Read more →</a>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <div class="input-group">
-                                    <a class="btn btn-primary text-center" type="button" href="/new">Create a Post!</a>
+                                    <a class="btn btn-primary text-center" type="button" href="/home/new">Create a Post!</a>
                                 </div>
                             </div>
                         </div>

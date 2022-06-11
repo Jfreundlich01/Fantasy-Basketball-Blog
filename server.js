@@ -5,11 +5,7 @@ require("dotenv").config(); // Load ENV Variables
 const express = require("express"); // import express
 const morgan = require("morgan"); //import morgan
 const methodOverride = require("method-override");
-const mongoose = require("./models/connection.js");
 const path = require("path");
-const players = require("./seed.js");
-const Player = require("./models/playersM.js")
-const Post = require("./models/postsM.js")
 const router = require("./controllers/postsC.js")
 const UserRouter = require("./controllers/userC.js");
 const session = require("express-session");
@@ -42,7 +38,7 @@ app.use(
 ////////////////////////////////
 // connect router
 ////////////////////////////////
-app.use("", router)
+app.use("/home", router)
 app.use("/user", UserRouter)
 
 ///////////////////////////////

@@ -8,7 +8,7 @@
     </head>
     <body>
         <div>
-          <form action="/index/{{post._id}}?_method=PUT" method="POST">
+          <form action="/home/{{post._id}}?_method=PUT" method="POST">
             <fieldset>
               <legend>Edit Post</legend>
               <label>
@@ -18,7 +18,7 @@
               <textarea id="post" name="postBody" rows="4" cols="50" value="">{{post.postBody}}</textarea>
             </fieldset>
             <input type="submit" value="Submit Edits"/>
-            <a href="/index/{{post._id}}">Back</a>
+            <a href="/home/{{post._id}}">Back</a>
           </form>
         </div>
     </body>

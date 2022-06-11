@@ -3,21 +3,29 @@
 /////////////////////////////////////////////
 const express = require("express")
 const Post = require("../models/postsM.js")
-const Player = require("../models/playersM.js")
+const Player = require("../models/playersM.js");
 
 ////////////////////////////////////////////
 // Create Route
 ///////////////////////////////////////////
 const router = express.Router()
 
-
+/////////////////////////////////////////
+// Router Middlewar
+///////////////////////////////////////
+router.use((req, res, next) => {
+  if (req.session.loggedIn) {
+    next();
+  } else {
+    res.redirect("/");
+  }
+});
 ////////////////////////////////////////////
 // Routes
 ////////////////////////////////////////////
 
-
 ////// index route ///////////
-router.get("/index", (req, res) => {
+router.get("/", (req, res) => {
     // find all the posts
     Post.find({})
       // render a template after they are found
@@ -30,31 +38,31 @@ router.get("/index", (req, res) => {
       });
   });
 
-////// Show /////////////
-router.get("/index/:id", (req,res) => {
-    let id = req.params.id
-    //find the post
-    Post.findById(id)
-        .then((post) => {
-          res.render("blog/show", {post});
-          console.log(post)
-        })
-        .catch((error) =>{
-            res.json({error})
-        });
-});
   
-
- ///// new route /////////////
-router.get("/new", (req, res) => {
+  
+  ///// new route /////////////
+  router.get("/new", (req, res) => {
     Player.find({})
     .then((players) => {
       //console.log(players)
       res.render("blog/new", {players});
     })
   });
-
-router.post("/index", (req,res) =>{
+  
+  ////// Show /////////////
+  router.get("/:id", (req,res) => {
+      let id = req.params.id
+      //find the post
+      Post.findById(id)
+          .then((post) => {
+            res.render("blog/show", {post});
+            console.log(post)
+          })
+          .catch((error) =>{
+              res.json({error})
+          });
+  });
+  router.post("/", (req,res) =>{
     let newPost = {
       title: `${req.body.name} Outlook`,
       name: req.body.name,
@@ -63,13 +71,13 @@ router.post("/index", (req,res) =>{
     Post.create(newPost).then((data) => {
       console.log(data)
     // send created posts as response to confirm creation
-    res.redirect("/index");
+    res.redirect("/home");
   });
 })
 
 ///// Edit ///////
 
-router.get("/index/:id/edit" ,(req,res) =>{
+router.get("/:id/edit" ,(req,res) =>{
   let id = req.params.id
   Post.findById(id)
   .then((post) => {
@@ -79,14 +87,14 @@ router.get("/index/:id/edit" ,(req,res) =>{
 })
 
 //update route
-router.put("/index/:id", (req, res) => {
+router.put("/:id", (req, res) => {
   // get the id from params
   const id = req.params.id;
   // update the post
   Post.findByIdAndUpdate(id, req.body, { new: true })
     .then((post) => {
       // redirect to show page after updating
-      res.redirect(`/index/${id}`);
+      res.redirect(`/home/${id}`);
     })
     // send error as json
     .catch((error) => {
@@ -96,14 +104,14 @@ router.put("/index/:id", (req, res) => {
 });
 
 //Delete
-router.delete("/index/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   // get the id from params
   const id = req.params.id;
   // delete the post
   Post.findByIdAndRemove(id)
     .then((post) => {
       // redirect to main page after deleting
-      res.redirect("/index");
+      res.redirect("/home");
     })
     // send error as json
     .catch((error) => {

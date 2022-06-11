@@ -191,6 +191,22 @@ app.put("/index/:id", (req, res) => {
 });
 
 //Delete
+app.delete("/index/:id", (req, res) => {
+  // get the id from params
+  const id = req.params.id;
+  // delete the post
+  Post.findByIdAndRemove(id)
+    .then((post) => {
+      // redirect to main page after deleting
+      res.redirect("/index");
+    })
+    // send error as json
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
+
 
 
    

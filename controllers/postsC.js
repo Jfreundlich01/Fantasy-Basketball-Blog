@@ -25,7 +25,7 @@ router.get("/index", (req, res) => {
     Post.find({})
       // render a template after they are found
       .then((posts) => {
-        res.render("index", {posts});
+        res.render("blog/index", {posts});
       })
       // send error as json if they aren't
       .catch((error) => {
@@ -33,14 +33,14 @@ router.get("/index", (req, res) => {
       });
   });
 
-//////    Show /////////////
+////// Show /////////////
 router.get("/index/:id", (req,res) => {
     let id = req.params.id
     //find the post
     Post.findById(id)
-        .then((posts) => {
-            console.log(posts)
-            res.render("show", {posts});
+        .then((post) => {
+          res.render("blog/show", {post});
+          console.log(post)
         })
         .catch((error) =>{
             res.json({error})
@@ -53,7 +53,7 @@ router.get("/new", (req, res) => {
     Player.find({})
     .then((players) => {
       //console.log(players)
-      res.render("new", {players});
+      res.render("blog/new", {players});
     })
   });
 
@@ -77,7 +77,7 @@ router.get("/index/:id/edit" ,(req,res) =>{
   Post.findById(id)
   .then((post) => {
     
-    res.render("edit", {post})
+    res.render("blog/edit", {post})
   })
 })
 

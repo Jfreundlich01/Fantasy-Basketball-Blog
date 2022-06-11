@@ -5,7 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta name="description" content="" />
             <meta name="author" content="" />
-            <title>Blog Home - Start Bootstrap Template</title>
+            <title>Fantasy Basketball ChatForum!</title>
             <!-- Favicon-->
             <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
             <!-- Core theme CSS (includes Bootstrap)-->
@@ -49,7 +49,7 @@
                                     <div class="card-body">
                                         <div class="small text-muted">{{post.timestamp}}</div>
                                         <h2 class="card-title h4">{{post.title}}</h2>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                                        <p class="card-text">{{post.postBody | slice: 0, 300}}</p>
                                         <a class="btn btn-primary" href="/index/{{post._id}}">Read more →</a>
                                     </div>
                                 </div>
@@ -82,6 +82,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <div class="input-group">
+                                    <a class="btn btn-primary text-center" type="button" href="/new">Create a Post!</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,8 +98,6 @@
             </footer>
             <!-- Bootstrap core JS-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-            <!-- Core theme JS-->
-            <script src="js/scripts.js"></script>
         </body>
     </html>
     

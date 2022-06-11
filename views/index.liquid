@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/new"><h1>Create a Post</h1></a>
     {%for post in posts%}
     <a href="/index/{{post._id}}"><h1>{{post.title}}- {{post.postOwner}}</h1></a>
     {%endfor%}

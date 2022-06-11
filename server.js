@@ -145,7 +145,11 @@ app.get("/index/:id", (req,res) => {
  
  // new route
 app.get("/new", (req, res) => {
-    res.render("new");
+    Player.find({})
+    .then((players) => {
+      //console.log(players)
+      res.render("new", {players});
+    })
   });
    
 //////////////////////////////////////////////

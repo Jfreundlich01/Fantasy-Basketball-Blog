@@ -46,7 +46,7 @@ const PostSchema = new Schema({
     firstName: String,
     lastName: String,
     postOwner: String,
-    postbody: String,
+    postBody: String,
     comments: Array,
 }, {
     timestamps: true
@@ -105,6 +105,7 @@ app.get("/posts/seed", (req, res) => {
     Post.deleteMany({}).then((data) => {
       // Seed Starter Posts
       Post.create(starterPosts).then((data) => {
+          console.log(data)
         // send created posts as response to confirm creation
         res.json(data);
       });
@@ -114,11 +115,10 @@ app.get("/posts/seed", (req, res) => {
 //Index
 // index route
 app.get("/index", (req, res) => {
-    // find all the fruits
+    // find all the posts
     Post.find({})
       // render a template after they are found
       .then((posts) => {
-        console.log(posts)
         res.render("index", {posts});
       })
       // send error as json if they aren't
@@ -126,6 +126,20 @@ app.get("/index", (req, res) => {
         res.json({ error });
       });
   });
+
+//Show
+app.get("/index/:id", (req,res) => {
+    let id = req.params.id
+    //find the post
+    Post.findById(id)
+        .then((posts) => {
+            console.log(posts)
+            res.render("show", {posts});
+        })
+        .catch((error) =>{
+            res.json({error})
+        });
+});
   
 
  

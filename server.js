@@ -90,11 +90,26 @@ app.get("/players/seed", (req, res) => {
     });
   });
 
-  
+//Post Seed
+starterPosts = [
+    {firstName: "Lebron", lastName: "James", PostOwner: "JFREUNDLICH", Comments: []},
+    {firstName: "Steph", lastNAme: "Curry", PostOwner: "JFREUNDLICH", Comments: []},
+    {firstName: "Ja", lastNAme: "Morant", PostOwner: "BigSkipnDemon", Comments: []},
+    {firstName: "James", lastNAme: "Harden", PostOwner: "SaquanBarkely01", Comments: []}
+]
 
-
+app.get("/posts/seed", (req, res) => {
+    
+    // Delete all Posts
+    Post.deleteMany({}).then((data) => {
+      // Seed Starter Posts
+      Post.create(starterPosts).then((data) => {
+        // send created posts as response to confirm creation
+        res.json(data);
+      });
+    });
+  });
  
-
  // new route
 app.get("/new", (req, res) => {
     res.render("new");

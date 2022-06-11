@@ -7,6 +7,7 @@ const morgan = require("morgan"); //import morgan
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const path = require("path");
+const players = require("./seed.js")
 
 /////////////////////////////////////////////
 // Database Connection
@@ -35,15 +36,8 @@ const { Schema, model } = mongoose;
 
 // make Player Schema
 const PlayerSchema = new Schema({
-  Player: String,
-  Country: String,
-  Post: Array,
-  Stats: {
-      ppg: Number,
-      apg: Number,
-      rpg: Number,
-      stp:Number,
-  }
+  firstName: String,
+  lastName: String,
 });
 
 //makle Posts Schema
@@ -87,6 +81,19 @@ app.get("/", (req, res) => {
     res.send("you ran your route.");
   });
 
+//Seed
+app.get("/players/seed", (req, res) => {
+    
+    // Delete all Players
+    Player.deleteMany({}).then((data) => {
+      // Seed Starter Players
+      Player.create(players).then((data) => {
+        // send created players as response to confirm creation
+        res.json(data);
+      });
+    });
+  });
+  
 //////////////////////////////////////////////
 // Server Listener
 //////////////////////////////////////////////

@@ -8,18 +8,13 @@ const methodOverride = require("method-override");
 const mongoose = require("./models/connection.js");
 const path = require("path");
 const players = require("./seed.js");
-const { stringify } = require("querystring");
+const Player = require("./models/playersM.js")
 
 ////////////////////////////////////////////////
 // Models
 ////////////////////////////////////////////////
 // pull schema and model from mongoose
 const { Schema, model } = mongoose;
-
-// make Player Schema
-const PlayerSchema = new Schema({
-  name: String
-});
 
 //makle Posts Schema
 const PostSchema = new Schema({
@@ -32,8 +27,6 @@ const PostSchema = new Schema({
     timestamps: true
 })
 
-// make models
-const Player = model("Player", PlayerSchema)
 const Post = model("Post", PostSchema);
 
 /////////////////////////////////////////////////

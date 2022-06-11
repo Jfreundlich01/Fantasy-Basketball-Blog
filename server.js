@@ -37,15 +37,13 @@ const { Schema, model } = mongoose;
 
 // make Player Schema
 const PlayerSchema = new Schema({
-  firstName: String,
-  lastName: String,
+  name: String
 });
 
 //makle Posts Schema
 const PostSchema = new Schema({
     title: String,
-    firstName: String,
-    lastName: String,
+    name: String,
     postOwner: String,
     postBody: String,
     comments: Array,
@@ -79,7 +77,7 @@ app.get("/", (req, res) => {
     res.send("you ran your route.");
   });
 
-// Players Seed
+//// Players Seed ////////
 app.get("/players/seed", (req, res) => {
     
     // Delete all Players
@@ -92,12 +90,12 @@ app.get("/players/seed", (req, res) => {
     });
   });
 
-//Post Seed
+// Post Seed ///////
 starterPosts = [
-    {title:"Lebron James Outlook",firstName: "Lebron", lastName: "James", postOwner: "JFREUNDLICH", postBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",comments: []},
-    {title:"Steph Curry Outlook",firstName: "Steph", lastName: "Curry", postOwner: "JFREUNDLICH",postBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra. Non sodales neque sodales ut etiam. Viverra nam libero justo laoreet sit amet cursus. Dolor magna eget est lorem ipsum dolor. Sed augue lacus viverra vitae congue eu. Habitant morbi tristique senectus et netus et malesuada fames.", comments: []},
-    {title:"Ja Morant Outlook",firstName: "Ja", lastName: "Morant", postOwner: "BigSkipnDemon",postBody: "In metus vulputate eu scelerisque felis imperdiet. Ornare lectus sit amet est placerat in egestas erat imperdiet. Scelerisque fermentum dui faucibus in. Risus viverra adipiscing at in tellus integer. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Nam at lectus urna duis convallis. Nisl nunc mi ipsum faucibus vitae. Dictumst vestibulum rhoncus est pellentesque elit.", comments: []},
-    {title:"James Harden Outlook",firstName: "James", lastName: "Harden", postOwner: "SaquanBarkely01",postBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut. Nec feugiat nisl pretium fusce id velit. Gravida arcu ac tortor dignissim convallis. Ac auctor augue mauris augue. Integer enim neque volutpat ac tincidunt vitae. Enim blandit volutpat maecenas volutpat blandit aliquam etiam.", comments: []}
+    {title:"Lebron James Outlook",name: "Lebron James" , postOwner: "JFREUNDLICH", postBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",comments: []},
+    {title:"Steph Curry Outlook", name: "Steph Curry" , postOwner: "JFREUNDLICH",postBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra. Non sodales neque sodales ut etiam. Viverra nam libero justo laoreet sit amet cursus. Dolor magna eget est lorem ipsum dolor. Sed augue lacus viverra vitae congue eu. Habitant morbi tristique senectus et netus et malesuada fames.", comments: []},
+    {title:"Ja Morant Outlook",name: "Ja Morant", postOwner: "BigSkipnDemon",postBody: "In metus vulputate eu scelerisque felis imperdiet. Ornare lectus sit amet est placerat in egestas erat imperdiet. Scelerisque fermentum dui faucibus in. Risus viverra adipiscing at in tellus integer. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Nam at lectus urna duis convallis. Nisl nunc mi ipsum faucibus vitae. Dictumst vestibulum rhoncus est pellentesque elit.", comments: []},
+    {title:"James Harden Outlook",name: "James Harden", postOwner: "SaquanBarkely01",postBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut. Nec feugiat nisl pretium fusce id velit. Gravida arcu ac tortor dignissim convallis. Ac auctor augue mauris augue. Integer enim neque volutpat ac tincidunt vitae. Enim blandit volutpat maecenas volutpat blandit aliquam etiam.", comments: []}
 ]
 
 app.get("/posts/seed", (req, res) => {
@@ -113,8 +111,7 @@ app.get("/posts/seed", (req, res) => {
     });
   });
 
-//Index
-// index route
+////// index route ///////////
 app.get("/index", (req, res) => {
     // find all the posts
     Post.find({})
@@ -128,7 +125,7 @@ app.get("/index", (req, res) => {
       });
   });
 
-//Show
+//////    Show /////////////
 app.get("/index/:id", (req,res) => {
     let id = req.params.id
     //find the post
@@ -143,7 +140,7 @@ app.get("/index/:id", (req,res) => {
 });
   
 
- // new route
+ ///// new route /////////////
 app.get("/new", (req, res) => {
     Player.find({})
     .then((players) => {
@@ -154,8 +151,8 @@ app.get("/new", (req, res) => {
 
 app.post("/index", (req,res) =>{
     let newPost = {
-      title: `${req.body.name} outlook`,
-      firstName: req.body.name,
+      title: `${req.body.name} Outlook`,
+      name: req.body.name,
       postBody: req.body.postBody
     }
     Post.create(newPost).then((data) => {
@@ -164,6 +161,35 @@ app.post("/index", (req,res) =>{
     res.redirect("/index");
   });
 })
+
+///// Edit ///////
+
+app.get("/index/:id/edit" ,(req,res) =>{
+  let id = req.params.id
+  Post.findById(id)
+  .then((post) => {
+    
+    res.render("edit", {post})
+  })
+})
+
+//update route
+app.put("/index/:id", (req, res) => {
+  // get the id from params
+  const id = req.params.id;
+  // update the post
+  Post.findByIdAndUpdate(id, req.body, { new: true })
+    .then((post) => {
+      // redirect to show page after updating
+      res.redirect(`/index/${id}`);
+    })
+    // send error as json
+    .catch((error) => {
+      console.log(error);
+      res.json({ error });
+    });
+});
+
    
 //////////////////////////////////////////////
 // Server Listener

@@ -3276,8 +3276,7 @@ const players = [
   
   players.forEach(player =>{
       p = {
-          firstName: player.firstName,
-          lastName: player.lastName
+          name: `${player.firstName} ${player.lastName}`
         }
         playerSeed.push(p)
     })

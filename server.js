@@ -12,7 +12,8 @@ const Player = require("./models/playersM.js")
 const Post = require("./models/postsM.js")
 const router = require("./controllers/postsC.js")
 const UserRouter = require("./controllers/userC.js");
-
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
 
 /////////////////////////////////////////////////
 // Create our Express Application Object Bind Liquid Templating Engine
@@ -27,6 +28,16 @@ app.use(morgan("tiny")); //logging
 app.use(methodOverride("_method")); // override for put and delete requests from forms
 app.use(express.urlencoded({ extended: true })); // parse urlencoded request bodies
 app.use(express.static("public")); // serve files from public statically
+
+//Middleware to setup session
+app.use(
+    session({
+      secret: process.env.SECRET,
+      store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+      saveUninitialized: true,
+      resave: false,
+    })
+  );
 
 ////////////////////////////////
 // connect router

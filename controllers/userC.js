@@ -16,7 +16,7 @@ const router = express.Router();
 
 // The Signup Routes (Get => form, post => submit form)
 router.get("/signup", (req, res) => {
-  res.render("user/signup");
+  res.render("signup");
 });
 
 router.post("/signup", async (req, res) => {
@@ -29,7 +29,7 @@ router.post("/signup", async (req, res) => {
   User.create(req.body)
     .then((user) => {
       // redirect to login page
-      res.redirect("/login");
+      res.redirect("/");
     })
     .catch((error) => {
       // send error as json

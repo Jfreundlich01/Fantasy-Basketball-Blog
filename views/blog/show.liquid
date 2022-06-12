@@ -19,7 +19,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="/index"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Profile</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">{{username}}</a></li>
                             <li class="nav-item"><a class="nav-link" href="#!">Logout</a></li>
                         </ul>
                     </div>
@@ -61,7 +61,10 @@
                             <div class="card bg-light">
                                 <div class="card-body">
                                     <!-- Comment form-->
-                                    <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
+                                    <form class="mb-4" action="/home/{{post._id}}/comments?_method=POST" method="POST">
+                                        <textarea class="form-control" rows="5" name="commentBody" placeholder="Join the discussion and leave a comment!"></textarea>
+                                        <button type = "submit" class ="btn btn-primary btn-sm mt-2">Comment</button>
+                                    </form>
                                     <!-- Comment with nested comments-->
                                     <div class="d-flex mb-4">
                                         <!-- Parent comment-->

@@ -4,7 +4,7 @@
 const express = require("express")
 const Post = require("../models/postsM.js")
 const Player = require("../models/playersM.js");
-
+const Comment = require("../models/commentsM.js")
 ////////////////////////////////////////////
 // Create Route
 ///////////////////////////////////////////
@@ -26,11 +26,12 @@ router.use((req, res, next) => {
 
 ////// index route ///////////
 router.get("/", (req, res) => {
+  let username = req.session.username
     // find all the posts
     Post.find({})
       // render a template after they are found
       .then((posts) => {
-        res.render("blog/index", {posts});
+        res.render("blog/index", {posts,username});
       })
       // send error as json if they aren't
       .catch((error) => {
@@ -49,7 +50,7 @@ router.get("/", (req, res) => {
     })
   });
   
-  ////// Show /////////////
+//////// Show ////////////////////
   router.get("/:id", (req,res) => {
       let username = req.session.username
       let id = req.params.id
@@ -57,13 +58,13 @@ router.get("/", (req, res) => {
       Post.findById(id)
           .then((post) => {
             res.render("blog/show", {post,username});
-            console.log(post)
+            //console.log(post)
           })
           .catch((error) =>{
               res.json({error})
           });
   });
-
+  //Create new Post route
   router.post("/", (req,res) =>{
     let newPost = {
       title: `${req.body.name} Outlook`,
@@ -72,9 +73,23 @@ router.get("/", (req, res) => {
       postOwner: req.session.username
     }
     Post.create(newPost).then((data) => {
-      console.log(data)
+      //console.log(data)
     // send created posts as response to confirm creation
     res.redirect("/home");
+  });
+})
+
+//new comment
+router.post("/:id/comments", (req,res) =>{
+  let id = req.params.id
+  console.log(req.body)
+  Comment.create(req.body)
+  .then((data) =>{
+    //console.log(data)
+    res.redirect(`/home/${id}`)
+  })
+  .catch((error) =>{
+    res.json({error})
   });
 })
 

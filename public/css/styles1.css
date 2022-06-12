@@ -401,6 +401,16 @@ fieldset {
   border: 0;
 }
 
+.userbtns {
+  display: flex;
+  flex-direction: row;
+}
+.userbtns .btn {
+  margin-right: 1vw;
+}
+
+
+
 legend {
   float: left;
   width: 100%;

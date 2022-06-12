@@ -107,6 +107,8 @@ hr {
 .hero-text{
   color: var(--bs-orange);
   font-weight: bolder;
+  background: rgba(0, 0, 0, .4);
+  border-radius: 2vw;
 }
 
 .hero-text h1{

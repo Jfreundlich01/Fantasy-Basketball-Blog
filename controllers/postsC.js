@@ -51,11 +51,12 @@ router.get("/", (req, res) => {
   
   ////// Show /////////////
   router.get("/:id", (req,res) => {
+      let username = req.session.username
       let id = req.params.id
       //find the post
       Post.findById(id)
           .then((post) => {
-            res.render("blog/show", {post});
+            res.render("blog/show", {post,username});
             console.log(post)
           })
           .catch((error) =>{

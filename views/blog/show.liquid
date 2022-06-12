@@ -45,7 +45,10 @@
                             <!-- Post content-->
                             <section class="mb-5">
                                 <p>{{post.postBody}}</p>
+                                {% if username == post.postOwner%}
                                 <a type="button" class="btn btn-outline-warning btn-sm" href="{{post._id}}/edit">Edit</a>
+                                {%else%}
+                                {%endif%}
                             </section>
                         </article>
                         <!-- Comments section-->

@@ -90,6 +90,10 @@ body {
   background-color: #000;
 }
 
+.newBody{
+  background-color: white;
+}
+
 header{
   background-image: url('../images/hero.jpg');
   background-repeat: no-repeat;
@@ -450,10 +454,8 @@ fieldset {
   rgb(167, 70, 20),
   rgb(202, 82, 20),
   rgb(239, 95, 17)
-  )  
-  
-  }
-  
+  )  }
+
   @media (min-width: 768px) {
   .gradient-form {
   height: 100vh !important;

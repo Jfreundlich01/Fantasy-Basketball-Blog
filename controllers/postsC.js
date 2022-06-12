@@ -54,15 +54,19 @@ router.get("/", (req, res) => {
   router.get("/:id", (req,res) => {
       let username = req.session.username
       let id = req.params.id
+      console.log(id)
       //find the post
       Post.findById(id)
-          .then((post) => {
-            res.render("blog/show", {post,username});
-            //console.log(post)
-          })
-          .catch((error) =>{
-              res.json({error})
-          });
+       .populate('comments').exec(function(err, post) {
+        res.render('blog/show', {post,username});
+      });
+          // .then((post) => {
+          //   res.render("blog/show", {post,username});
+          //   //console.log(post)
+          // })
+          // .catch((error) =>{
+          //     res.json({error})
+          // });
   });
   //Create new Post route
   router.post("/", (req,res) =>{
@@ -90,10 +94,19 @@ router.post("/:id/comments", (req,res) =>{
     replies: []
     }
   //console.log(req.body)
+  // Post.findById(id, function(err, post) {
+  //   // We can push subdocs into Mongoose arrays
+  //   post.comments.push(newComment);
+  //   // Save any changes made to the movie doc
+  //   post.save(function(err) {
+  //     // Step 5:  Respond to the Request (redirect if data has been changed)
+  //     res.redirect(`/home/${id}`);
+  //   });
+  // });
   Comment.create(newComment)
   .then((data) =>{
     //console.log(data)
-    console.log(data)
+    console.log(newComment)
     res.redirect(`/home/${id}`)
   })
   .catch((error) =>{

@@ -45,7 +45,7 @@ app.use("/user", UserRouter)
 // Routes
 ///////////////////////////////
 app.get("/", (req, res) => {
-    res.render("home");
+    res.render("login");
   });
 
 //////////////////////////////////////////////

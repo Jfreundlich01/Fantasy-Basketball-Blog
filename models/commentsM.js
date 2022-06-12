@@ -11,6 +11,7 @@ const { Schema, model } = mongoose;
 
 //makle Posts Schema
 const CommentSchema = new Schema({
+    commentId: String,
     commentOwner: String,
     commentBody: String,
     likes: {

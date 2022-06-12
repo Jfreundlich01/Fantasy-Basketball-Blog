@@ -82,10 +82,18 @@ router.get("/", (req, res) => {
 //new comment
 router.post("/:id/comments", (req,res) =>{
   let id = req.params.id
-  console.log(req.body)
-  Comment.create(req.body)
+  let newComment = {
+    commentId: id,
+    commentOwner: req.session.username,
+    commentBody: req.body.commentBody,
+    likes: 0,
+    replies: []
+    }
+  //console.log(req.body)
+  Comment.create(newComment)
   .then((data) =>{
     //console.log(data)
+    console.log(data)
     res.redirect(`/home/${id}`)
   })
   .catch((error) =>{

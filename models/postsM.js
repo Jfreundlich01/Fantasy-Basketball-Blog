@@ -2,6 +2,7 @@
 // Import Dependencies
 /////////////////////////////////////////////
 const mongoose = require('./connection.js')
+const Comment = require('./commentsM.js')
 
 ////////////////////////////////////////////////
 // Models
@@ -16,7 +17,9 @@ const PostSchema = new Schema({
     image: String,
     postOwner: String,
     postBody: String,
-    comments: Array,
+    comments: [
+        { type: Schema.Types.ObjectId, ref: 'Comment' }
+    ],
 }, {
     timestamps: true
 })

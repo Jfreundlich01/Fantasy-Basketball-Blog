@@ -13,8 +13,7 @@
     		    <div class="form-group">
     		        <label for="title">Player <span class="require">*</span></label>
     		        <select id="players" name="name">
-                        {% assign players_by_name = players | sort: "name" %}
-                    {%for player in players_by_name%}
+                    {%for player in players%}
                   <option value="{{player.name}}">{{player.name}}</option>
                   {%endfor%}
               </select>

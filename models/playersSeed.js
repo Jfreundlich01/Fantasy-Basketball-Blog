@@ -10,11 +10,16 @@ const playerSeed = require('../seed.js')
 
 //get rid of duplicates
 playerSeed.sort((a, b) => (a.name > b.name) ? 1 : -1)
-// playerSeed.forEach(player =>{
-//   if(!uniqPlayers.includes(player)){
-//     uniqPlayers.push(player)
-//   }
-// })
+
+let uniquePlayerName = []
+let uniquePlayers = []
+
+playerSeed.forEach(player =>{
+  if(!uniquePlayerName.includes(player.name)){
+    uniquePlayerName.push(player.name)
+    uniquePlayers.push(player)
+  }
+})
 
 // Save the connection in a variable
 const db = mongoose.connection
@@ -25,10 +30,10 @@ db.on("open", () =>{
     // Delete all Players
     Player.deleteMany({}).then((data) => {
       // Seed Starter Players
-      Player.create(playerSeed)
+      Player.create(uniquePlayers)
       .then((data) => {
        //log the new players to confirm their creation
-       console.log(playerSeed)
+       console.log(uniquePlayers)
        db.close();
       })
       .catch((error) => {

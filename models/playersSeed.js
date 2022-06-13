@@ -8,6 +8,13 @@ const playerSeed = require('../seed.js')
 // Seed Code
 /////////////////////////////////////////
 
+//get rid of duplicates
+playerSeed.sort((a, b) => (a.name > b.name) ? 1 : -1)
+// playerSeed.forEach(player =>{
+//   if(!uniqPlayers.includes(player)){
+//     uniqPlayers.push(player)
+//   }
+// })
 
 // Save the connection in a variable
 const db = mongoose.connection

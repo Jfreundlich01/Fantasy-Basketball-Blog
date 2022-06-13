@@ -3,7 +3,7 @@
 /////////////////////////////////////////////
 const mongoose = require('./connection.js')
 const Comment = require('./commentsM.js')
-const PlayerSchema = require('./playersM.js')
+const Player = require('./playersM.js')
 
 ////////////////////////////////////////////////
 // Models
@@ -18,6 +18,9 @@ const PostSchema = new Schema({
     image: String,
     postOwner: String,
     postBody: String,
+    player: [
+        { type: Schema.Types.ObjectId, ref: 'Player' }
+    ],
     comments: [
         { type: Schema.Types.ObjectId, ref: 'Comment' }
     ],

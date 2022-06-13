@@ -721,6 +721,7 @@ const playerSeed = [
     {
       id: 248,
       name: 'Al Horford',
+      image: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3213.png&w=350&h=254',
       nba: { start: 2007, pro: 14, name: "Boston Celtics", nickname: "BOS" },
       height: { feets: '6', inches: '6' },
       weight: '240',

@@ -14,7 +14,9 @@ const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   posts: Array,
-  Comments: Array,
+  Comments: [
+    { type: Schema.Types.ObjectId, ref: 'Comment' }
+],
 });
 
 // make user model

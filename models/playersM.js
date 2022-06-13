@@ -12,6 +12,7 @@ const { Schema, model } = mongoose;
 // make Player Schema
 const PlayerSchema = new Schema({
     name: String,
+    image: String,
     nba: { 
       start: Number, 
       pro: Number, 
@@ -30,4 +31,5 @@ const PlayerSchema = new Schema({
   // make models
 const Player = model("Player", PlayerSchema)
 
+module.exports = PlayerSchema
 module.exports = Player

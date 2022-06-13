@@ -18,8 +18,16 @@
                             {%for post in posts%}
                             <div class="col-lg-6">
                                 <!-- Blog post-->
-                                <div class="card mb-4">
-                                    <a href="#!"><img class="card-img-top" src="{{post.image}}" alt="..." /></a>
+                                <div class="index-card card mb-4">
+                                    <div class="">
+                                        {%if post.image%}
+                                        <img class="image-block" src="{{post.image}}" alt="..." />
+                                        {%else%}
+                                        <div class="jersey-block">
+                                            <div class="jersey-num">{{post.jersey}}</div>
+                                        </div>
+                                        {%endif%}
+                                    </div>
                                     <div class="card-body">
                                         <div class="small text-muted">{{post.timestamp}}</div>
                                         <h2 class="card-title h4">{{post.title}}</h2>

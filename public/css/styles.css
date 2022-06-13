@@ -94,6 +94,10 @@ body {
   background-color: white;
 }
 
+.image-block{
+  width: 100%
+}
+
 header{
   background-image: url('../images/hero.jpg');
   background-repeat: no-repeat;

@@ -54,11 +54,12 @@ router.get("/", (req, res) => {
   router.get("/:id", (req,res) => {
       let username = req.session.username
       let id = req.params.id
-      console.log(id)
+      //console.log(id)
+      //console.log(req.body.comments)
       //find the post
       Post.findById(id)
-       .populate('comments').exec(function(err, post) {
-        res.render('blog/show', {post,username});
+        .populate('comments').exec(function(err, post) {
+         res.render('blog/show', {post,username});
       });
           // .then((post) => {
           //   res.render("blog/show", {post,username});
@@ -73,10 +74,13 @@ router.get("/", (req, res) => {
     let newPost = {
       title: `${req.body.name} Outlook`,
       name: req.body.name,
+      image: req.body.image,
       postBody: req.body.postBody,
       postOwner: req.session.username
     }
+    //console.log(req.body)
     Post.create(newPost).then((data) => {
+      
       //console.log(data)
     // send created posts as response to confirm creation
     res.redirect("/home");
@@ -92,21 +96,16 @@ router.post("/:id/comments", (req,res) =>{
     commentBody: req.body.commentBody,
     likes: 0,
     replies: []
-    }
+  }
   //console.log(req.body)
-  // Post.findById(id, function(err, post) {
-  //   // We can push subdocs into Mongoose arrays
-  //   post.comments.push(newComment);
-  //   // Save any changes made to the movie doc
-  //   post.save(function(err) {
-  //     // Step 5:  Respond to the Request (redirect if data has been changed)
-  //     res.redirect(`/home/${id}`);
-  //   });
-  // });
   Comment.create(newComment)
-  .then((data) =>{
+  .then((comment) =>{
     //console.log(data)
-    console.log(newComment)
+    Post.findByIdAndUpdate(id, {$push: {comments: comment}})
+    .then((post) =>{
+      console.log(post)
+    })
+    //console.log(newComment)
     res.redirect(`/home/${id}`)
   })
   .catch((error) =>{

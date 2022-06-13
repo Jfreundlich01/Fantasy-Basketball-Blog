@@ -3,6 +3,7 @@
 /////////////////////////////////////////////
 const mongoose = require('./connection.js')
 const Comment = require('./commentsM.js')
+const PlayerSchema = require('./playersM.js')
 
 ////////////////////////////////////////////////
 // Models

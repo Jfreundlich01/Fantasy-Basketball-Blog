@@ -105,18 +105,152 @@ body {
 
 .jersey-block{
   width: 100%;
-  background-color: green;
   height: 48vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 200px;
+  font-size: 250px;
 }
+
 .jersey-num{
-  color: green;
-  -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 7px;
 }
+
+.Atl-block{
+  background-color: rgb(225, 68, 52);
+}
+
+.Atl-num{
+  color:  rgb(196,214,0);
+  -webkit-text-stroke-color: rgb(38,40,42);
+}
+
+.Bos-block{
+  background-color: rgb(0, 122,51);
+}
+
+.Bos-num{
+  color:  rgb(255,255,255);
+  -webkit-text-stroke-color: rgb(139,111,78);
+}
+
+.Bkn-block{
+  background-color: rgb(0,0,0);
+}
+
+.Bkn-num{
+  color:  rgb(0,0,0);
+  -webkit-text-stroke-color: rgb(255,255,255);
+}
+
+.Cha-block{
+  background-color: rgb(29,17,96);
+}
+
+.Cha-num{
+  color:  rgb(0,120,140);
+  -webkit-text-stroke-color: rgb(161,161,164);
+}
+
+.Chi-block{
+  background-color: rgb(206,17,65);
+}
+
+.Chi-num{
+  color:  rgb(206,17,65);
+  -webkit-text-stroke-color: rgb(6,25,34);
+}
+
+.Cle-block{
+  background-color: rgb(134,0,56);
+}
+
+.Cle-num{
+  color:  rgb(4,30,66);
+  -webkit-text-stroke-color: rgb(253,187,48);
+}
+
+.Dal-block{
+  background-color: rgb(0,83,188);
+}
+
+.Dal-num{
+  color:  rgb(0,43,92);
+  -webkit-text-stroke-color: rgb(187,196,202);
+}
+
+.Den-block{
+  background-color: rgb(13,34,64);
+}
+
+.Den-num{
+  color:  rgb(255,198,39);
+  -webkit-text-stroke-color: rgb(29,66,138);
+}
+
+.Det-block{
+  background-color: rgb(200,16,46);
+}
+
+.Det-num{
+  color:  rgb(29,66,138);
+  -webkit-text-stroke-color: rgb(181,179,179);
+}
+
+.Gsw-block{
+  background-color: rgb(29,66,138);
+}
+
+.Gsw-num{
+  color:  rgb(255,199,44);
+  -webkit-text-stroke-color: rgb(29,66,138);
+}
+
+.Hou-block{
+  background-color: rgb(206,17,65);
+}
+
+.Hou-num{
+  color:  rgb(206,17,65);
+  -webkit-text-stroke-color: rgb(38,40,42);
+}
+
+.Ind-block{
+  background-color: rgb(0,45,98);
+}
+
+.Ind-num{
+  color:  rgb(253,187,48);
+  -webkit-text-stroke-color: rgb(190,192,194);
+}
+
+.Lac-block{
+  background-color: rgb(200,16,46);
+}
+
+.Lac-num{
+  color:  rgb(29,66,148);
+  -webkit-text-stroke-color: rgb(190,192,194);
+}
+
+.Lal-block{
+  background-color: rgb(85,37,130);
+}
+
+.Lal-num{
+  color:  rgb(253,185,39);
+  -webkit-text-stroke-color: rgb(6,25,34);
+}
+
+.Mem-block{
+  background-color: rgb(93,118,169);
+}
+
+.Mem-num{
+  color:  rgb(18,23,63);
+  -webkit-text-stroke-color: rgb(255,187,34);
+}
+
 header{
   background-image: url('../images/hero.jpg');
   background-repeat: no-repeat;

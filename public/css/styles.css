@@ -107,6 +107,15 @@ body {
   width: 100%;
   background-color: green;
   height: 48vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200px;
+}
+.jersey-num{
+  color: green;
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #fff;
 }
 header{
   background-image: url('../images/hero.jpg');

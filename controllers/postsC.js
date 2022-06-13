@@ -4,7 +4,8 @@
 const express = require("express")
 const Post = require("../models/postsM.js")
 const Player = require("../models/playersM.js");
-const Comment = require("../models/commentsM.js")
+const Comment = require("../models/commentsM.js");
+const User = require("../models/userM.js");
 ////////////////////////////////////////////
 // Create Route
 ///////////////////////////////////////////
@@ -24,6 +25,16 @@ router.use((req, res, next) => {
 // Routes
 ////////////////////////////////////////////
 
+//user Profile
+router.get("/user", (req,res) =>{
+  let username = req.session.username
+  User.find({username: username})
+    .populate('posts').exec(function(err, user) {
+      console.log(user)
+      res.render('blog/profile', {user});
+});
+})
+
 ////// index route ///////////
 router.get("/", (req, res) => {
   let username = req.session.username
@@ -38,6 +49,10 @@ router.get("/", (req, res) => {
         res.json({ error });
       });
   });
+
+  router.get("/profile", (req,res) => {
+    res.render("blog/profile")
+  })
 
   
   
@@ -71,7 +86,7 @@ router.get("/", (req, res) => {
   });
   //Create new Post route
   router.post("/", (req,res) =>{
-    //let playerobj = ""
+    let username = req.session.username
     let newPost = {
       title: `${req.body.name} Outlook`,
       name: req.body.name,
@@ -88,6 +103,10 @@ router.get("/", (req, res) => {
           data.player.push(newplayer)
           data.save()
           console.log(data)
+         })
+      User.findOneAndUpdate({username:username}, {$push: {posts: data}})
+        .then((user) =>{
+           console.log(user)
          })
     // send created posts as response to confirm creation
     res.redirect("/home");

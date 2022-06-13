@@ -13,7 +13,13 @@ const { Schema, model } = mongoose;
 const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  posts: Array,
+  image:{
+    type: String,
+    default: "/images/defaultProPic.png"
+  },
+  posts: [
+    { type: Schema.Types.ObjectId, ref: 'Post' }
+  ],
   Comments: [
     { type: Schema.Types.ObjectId, ref: 'Comment' }
 ],

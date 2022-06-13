@@ -31,5 +31,5 @@ const PlayerSchema = new Schema({
   // make models
 const Player = model("Player", PlayerSchema)
 
-module.exports = PlayerSchema
+
 module.exports = Player

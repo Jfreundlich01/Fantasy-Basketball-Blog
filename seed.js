@@ -3527,6 +3527,7 @@ const playerSeed = [
     {
       id: 124,
       name: 'Stephen Curry',
+      image:"https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png&w=350&h=254",
       nba: { start: 2009, pro: 12, name: "Golden State Warriors", nickname: "GSW" },
       height: { feets: '6', inches: '6' },
       weight: '185',
@@ -4971,6 +4972,7 @@ const playerSeed = [
 {
   id: 265,
   name: 'LeBron James',
+  image:"https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png&w=350&h=254",
   nba: { start: 2003, pro: 18, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '250',
@@ -5115,6 +5117,7 @@ const playerSeed = [
 {
   id: 1881,
   name: 'Ja Morant',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4279888.png&w=350&h=254",
   nba: { start: 2019, pro: 2, name: "Memphis Grizzlies", nickname: "MEM" },
   height: { feets: '6', inches: '6' },
   weight: '174',
@@ -8066,6 +8069,7 @@ const playerSeed = [
 {
   id: 216,
   name: 'James Harden',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3992.png&w=350&h=254",
   nba: { start: 2009, pro: 12, name: "Philadelphia 76ers", nickname: "PHI" },
   height: { feets: '6', inches: '6' },
   weight: '220',

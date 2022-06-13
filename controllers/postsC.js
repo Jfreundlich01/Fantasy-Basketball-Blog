@@ -71,22 +71,28 @@ router.get("/", (req, res) => {
   });
   //Create new Post route
   router.post("/", (req,res) =>{
+    //let playerobj = ""
     let newPost = {
       title: `${req.body.name} Outlook`,
       name: req.body.name,
-      image: req.body.image,
       postBody: req.body.postBody,
       postOwner: req.session.username
     }
+    //console.log(newPost.player)
+    // console.log(playerId)
     //console.log(req.body)
-    Post.create(newPost).then((data) => {
-      
-      //console.log(data)
+    Post.create(newPost)
+    .then((data) => {
+      Player.findOne({name: req.body.name})
+        .then((newplayer) =>{
+          data.player.push(newplayer)
+          data.save()
+          console.log(data)
+         })
     // send created posts as response to confirm creation
     res.redirect("/home");
   });
 })
-
 //new comment
 router.post("/:id/comments", (req,res) =>{
   let id = req.params.id

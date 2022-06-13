@@ -3,7 +3,7 @@
 /////////////////////////////////////////////
 const mongoose = require('./connection.js')
 const Comment = require('./commentsM.js')
-const Player = require('./playersM.js')
+
 
 ////////////////////////////////////////////////
 // Models
@@ -11,22 +11,41 @@ const Player = require('./playersM.js')
 // pull schema and model from mongoose
 const { Schema, model } = mongoose;
 
+// Player Schema
+const PlayerSchema = new Schema({
+    name: String,
+    image: String,
+    nba: { 
+      start: Number, 
+      pro: Number, 
+      name: String, 
+      nickname: String},
+    height: { 
+      feets: String, 
+      inches: String },
+    weight: String,
+    college: String,
+    pos: String,
+    jersey: Number
+
+  });
+
+
 //makle Posts Schema
 const PostSchema = new Schema({
     title: String,
     name: String,
     image: String,
-    postOwner: String,
+    player: [PlayerSchema],
     postBody: String,
-    player: [
-        { type: Schema.Types.ObjectId, ref: 'Player' }
-    ],
+    postOwner: String,
     comments: [
         { type: Schema.Types.ObjectId, ref: 'Comment' }
     ],
 }, {
     timestamps: true
 })
+
 
 const Post = model("Post", PostSchema);
 

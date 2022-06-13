@@ -1,5 +1,6 @@
 const { response } = require("express");
 
+
 const options = {
 	method: 'GET',
 	headers: {
@@ -13,52 +14,83 @@ const options = {
 let players = []
 let i = 1;
 
-    fetch(`https://api-nba-v1.p.rapidapi.com/players?team=${i}&season=2021`, options)
-        .then(response => response.json())
-        .then(response => {
-            for (let j = 0; j < response.response.length; j++){
-				let player = {
-                    id:"",
-                    firstname:"",
-                    lastname:"",
-                    nba:{
-                        start:0,
-                        pro:0,
-						team: i,
-                    },
-                    height:{
-                        feets:"",
-                        inches:"",
-                    },
-                    college:"",
-                    position:""
-                }
+    // fetch(`https://api-nba-v1.p.rapidapi.com/players?team=${i}&season=2021`, options)
+    //     .then(response => response.json())
+    //     .then(response => {
+    //         for (let j = 0; j < response.response.length; j++){
+	// 			let player = {
+    //                 id:"",
+    //                 firstname:"",
+    //                 lastname:"",
+    //                 nba:{
+    //                     start:0,
+    //                     pro:0,
+	// 					team: i,
+    //                 },
+    //                 height:{
+    //                     feets:"",
+    //                     inches:"",
+    //                 },
+    //                 college:"",
+    //                 position:""
+    //             }
 
-                player = {
-                    id:response.response[j].id,
-                    firstname:response.response[j].firstname,
-                    lastname:response.response[j].lastname,
-                    nba:{
-                        start:response.response[j].nba.start,
-                        pro:response.response[j].nba.pro,
-						team: i,
-                    },
-                    height:{
-                        feets:response.response[j].height.feets,
-                        inches:response.response[j].height.feets,
-                    },
-                    college:response.response[j].college,
-                    position:response.response[j].leagues.standard.pos
-                }
-                // console.log(player)
-                players.push(player)
-            }
-            // console.log(response.response[0])
-        })
-    console.log(players)
-    console.log(players.length)
+    //             player = {
+    //                 id:response.response[j].id,
+    //                 firstname:response.response[j].firstname,
+    //                 lastname:response.response[j].lastname,
+    //                 nba:{
+    //                     start:response.response[j].nba.start,
+    //                     pro:response.response[j].nba.pro,
+	// 					team: i,
+    //                 },
+    //                 height:{
+    //                     feets:response.response[j].height.feets,
+    //                     inches:response.response[j].height.feets,
+    //                 },
+    //                 college:response.response[j].college,
+    //                 position:response.response[j].leagues.standard.pos
+    //             }
+    //             // console.log(player)
+    //             players.push(player)
+    //         }
+    //         // console.log(response.response[0])
+    //     })
+    // console.log(players)
+    // console.log(players.length)
+ fetch('https://api-nba-v1.p.rapidapi.com/players?team=41&season=2021', options)
+	.then(response => response.json())
+	.then(response =>  { 
+        let team = response.response
+        for (const a of team){
+            let player = {
+                                id:a.id,
+                                name: `${a.firstname} ${a.lastname}`,
+                                nba:{
+                                    start:a.nba.start,
+                                    pro:a.nba.pro,
+                					team: 41,
+                                },
+                                height:{
+                                    feets:a.height.feets,
+                                    inches:a.height.feets,
+                                },
+                                weight: a.weight.pounds,
+                                college:a.college,
+                    }
+                    if(a.leagues.standard){
+                        player.pos = a.leagues.standard.pos
+                        player.jersey = a.leagues.standard.jersey
+                    } else {
 
-// fetch('https://api-nba-v1.p.rapidapi.com/players?team=1&season=2021', options)
+                    }
+            players.push(player)
+        }
+        console.log(players)
+    })
+	.catch(err => console.error(err));
+
+// fetch('https://api-nba-v1.p.rapidapi.com/players?team=3&season=2021', options)
 // 	.then(response => response.json())
-// 	.then(response =>  console.log(response.response.length))
-// 	.catch(err => console.error(err));
+// 	.then(response => console.log(response.response))
+

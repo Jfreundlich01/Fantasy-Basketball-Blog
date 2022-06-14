@@ -12,7 +12,10 @@ const { Schema, model } = mongoose;
 //makle Posts Schema
 const CommentSchema = new Schema({
     commentId: String,
-    commentOwner: String,
+    commentOwner: {
+      username : String,
+      propic : String
+    },
     commentBody: String,
     likes: {
         type: Number,

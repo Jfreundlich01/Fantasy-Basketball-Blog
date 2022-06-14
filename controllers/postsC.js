@@ -75,7 +75,8 @@ router.get("/", (req, res) => {
       //console.log(req.body.comments)
       //find the post
       Post.findById(id)
-        .populate('comments').exec(function(err, post) {
+        .populate('comments')
+        .exec(function(err, post) {
          res.render('blog/show', {post,username});
       });
           // .then((post) => {
@@ -120,7 +121,10 @@ router.post("/:id/comments", (req,res) =>{
   let id = req.params.id
   let newComment = {
     commentId: id,
-    commentOwner: req.session.username,
+    commentOwner: {
+      username : req.session.username,
+      propic : ""
+    },
     commentBody: req.body.commentBody,
     likes: 0,
     replies: []
@@ -128,16 +132,22 @@ router.post("/:id/comments", (req,res) =>{
   //console.log(req.body)
   Comment.create(newComment)
   .then((comment) =>{
-    //console.log(data)
-    Post.findByIdAndUpdate(id, {$push: {comments: comment}})
-    .then((post) =>{
-      console.log(post)
-    })
-    User.findOneAndUpdate({username:username}, {$push: {comments: comment}})
+        //console.log(data)
+        User.findOne({username: username})
         .then((user) =>{
-           console.log(user)
+          comment.commentOwner.propic = user.image
+          comment.save()
+          console.log(comment)
          })
-    //console.log(newComment)
+        Post.findByIdAndUpdate(id, {$push: {comments: comment}})
+        .then((post) =>{
+          console.log(post)
+        })
+        User.findOneAndUpdate({username:username}, {$push: {comments: comment}})
+        .then((user) =>{
+          console.log(user)
+        })
+        //console.log(newComment)
     res.redirect(`/home/${id}`)
   })
   .catch((error) =>{

@@ -349,14 +349,19 @@ abbr[data-bs-original-title] {
           text-decoration-skip-ink: none;
 }
 
-.profile-cont{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  margin: 5px;
+.post a{
+  text-decoration: none;
+  color: #000;
 }
+
+.profile-body{
+  display: flex;
+}
+
+.profile-container{
+  max-width: 30vw;
+}
+
 
 address {
   margin-bottom: 1rem;

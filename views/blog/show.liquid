@@ -36,10 +36,14 @@
                             <header class="mb-4">
                                 <!-- Post title-->
                                 <h1 class="fw-bolder mb-1">{{post.title}}</h1>
+                                <div class="player-stats">
+                                    <h6>{{post.player[0].nba.name}} {{post.player[0].pos}}</h6>
+                                    <h6>{{post.player[0].height.feets}}' {{post.player[0].height.inches}}"</h6>
+                                    <h6>{{post.player[0].nba.pro}} years pro</h6>
+                                </div>
                                 <!-- Post meta content-->
                                 <div class="text-muted fst-italic mb-2">{{post.timestamp}}</div>
                                 <!-- Post categories-->
-                                <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{post.name}}</a>
                                 <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{post.postOwner}}</a>
                             </header>
                             <!-- Post content-->
@@ -72,7 +76,7 @@
                                         <div class="flex-shrink-0"><img class="rounded-circle" src="{{comment.commentOwner.propic}}" width="50" alt="..." /></div>
                                         <div class="ms-3">
                                             <div class="fw-bold">{{comment.commentOwner.username}}</div>
-                                            <p>{{comment.commentBody}}</p>
+                                            <p class = "commentbody">{{comment.commentBody}}</p>
                                         </div>
                                     </div>
                                     {%endfor%}

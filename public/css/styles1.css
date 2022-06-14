@@ -144,6 +144,7 @@ h4, .h4 {
   }
 }
 
+
 h5, .h5 {
   font-size: 1.25rem;
 }
@@ -11295,4 +11296,16 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+
+.comment-btn {
+  font-size: 10px;
+}
+
+.commentbody {
+  margin-bottom: 0;
+}
+
+.userbtns{
+  margin-bottom: 1rem;
 }

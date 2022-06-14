@@ -183,7 +183,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-//Delete
+//Delete Post
 router.delete("/:id", (req, res) => {
   // get the id from params
   const id = req.params.id;

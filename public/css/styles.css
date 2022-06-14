@@ -251,6 +251,141 @@ body {
   -webkit-text-stroke-color: rgb(255,187,34);
 }
 
+.Mia-block{
+  background-color: rgb(152, 0, 46);
+}
+
+.Mia-num{
+  color:  rgb(249,160,27);
+  -webkit-text-stroke-color: rgb(6,25,34);
+}
+
+.Mil-block{
+  background-color: rgb(0.71,27);
+}
+
+.Mil-num{
+  color:  rgb(240,235,210);
+  -webkit-text-stroke-color: rgb(0,127,197);
+}
+
+.Min-block{
+  background-color: rgb(12,35,64);
+}
+
+.Min-num{
+  color:  rgb(35,97,146);
+  -webkit-text-stroke-color: rgb(158,162,162);
+}
+
+.Nop-block{
+  background-color: rgb(0,22,65);
+}
+
+.Nop-num{
+  color:  rgb(225,58,62);
+  -webkit-text-stroke-color: rgb(180,151,90);
+}
+
+.Nyk-block{
+  background-color: rgb(0,107,182);
+}
+
+.Nyk-num{
+  color:  rgb(245,132,38);
+  -webkit-text-stroke-color: rgb(190,192,194);
+}
+
+.Okc-block{
+  background-color: rgb(0,125,195);
+}
+
+.Okc-num{
+  color:  rgb(239,59,36);
+  -webkit-text-stroke-color: rgb(253,187,48);
+}
+
+.Orl-block{
+  background-color: rgb(0,125,197);
+}
+
+.Orl-num{
+  color:  rgb(196,206,211);
+  -webkit-text-stroke-color: rgb(6,25,34);
+}
+
+.Phi-block{
+  background-color: rgb(0,107,182);
+}
+
+.Phi-num{
+  color:  rgb(237,23,76);
+  -webkit-text-stroke-color: rgb(0,43,92);
+}
+
+.Pho-block{
+  background-color: rgb(29,17,96);
+}
+
+.Pho-num{
+  color:  rgb(229,95,32);
+  -webkit-text-stroke-color: rgb(6,25,34);
+}
+
+.Por-block{
+  background-color: rgb(224,58,62);
+}
+
+.Por-num{
+  color:  rgb(224,58,62);
+  -webkit-text-stroke-color: rgb(6,25,34);
+}
+
+.Sac-block{
+  background-color: rgb(91, 43, 130);
+}
+
+.Sac-num{
+  color:  rgb(99, 113, 122);
+  -webkit-text-stroke-color: rgb(6, 25, 34);
+}
+
+.Sas-block{
+  background-color: rgb(196,206,211);
+}
+
+.Sas-num{
+  color:  rgb(6,25,34);
+  -webkit-text-stroke-color: rgb(196,206,211);
+}
+
+.Tor-block{
+  background-color: rgb(206,17,65);
+}
+
+.Tor-num{
+  color:  rgb(6,25,34);
+  -webkit-text-stroke-color: rgb(161,161,164);
+}
+
+.Uta-block{
+  background-color: rgb(0,43,92);
+}
+
+.Uta-num{
+  color:  rgb(0,71,27);
+  -webkit-text-stroke-color: rgb(249,160,27);
+}
+
+.Was-block{
+  background-color: rgb(0,43,92);
+}
+
+.Was-num{
+  color:  rgb(227,24,55);
+  -webkit-text-stroke-color: rgb(196,206,212);
+}
+
 header{
   background-image: url('../images/hero.jpg');
   background-repeat: no-repeat;

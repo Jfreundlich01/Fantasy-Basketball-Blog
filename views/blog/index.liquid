@@ -21,7 +21,7 @@
                                 <div class="index-card card mb-4">
                                         {%if post.player[0].image%}
                                         <img class="image-block" src="{{post.player[0].image}}" alt="..." />
-                                        {%else%}
+                                        {%elsif {{post.player[0].nba.nickname}}%}
                                         <div class="jersey-block Bos-block text-center">
                                             <div class="jersey-num Bos-num">{{post.player[0].jersey}}</div>
                                         </div>

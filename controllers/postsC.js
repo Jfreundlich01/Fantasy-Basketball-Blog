@@ -26,72 +26,77 @@ router.use((req, res, next) => {
 ////////////////////////////////////////////
 
 //user Profile
-router.get("/user", (req,res) =>{
-  let username = req.session.username
-  User.find({username: username})
-    .populate('posts')
-    .populate('comments')
-    .exec(function(err, user){
-      console.log(user)
-      res.render('blog/profile', {user});
-    })
-})
 
 ////// index route ///////////
 router.get("/", (req, res) => {
   let username = req.session.username
-    // find all the posts
-    Post.find({})
-      // render a template after they are found
-      .then((posts) => {
-        res.render("blog/index", {posts,username});
-      })
-      // send error as json if they aren't
-      .catch((error) => {
-        res.json({ error });
-      });
+  // find all the posts
+  Post.find({})
+  // render a template after they are found
+  .then((posts) => {
+    res.render("blog/index", {posts,username});
+  })
+  // send error as json if they aren't
+  .catch((error) => {
+    res.json({ error });
   });
+});
 
-  router.get("/search/:playername", (req,res) =>{
-    playername = req.params.playername
-    //console.log(playername)
-    Post.findOne({name: playername})
-      .then((post) =>{
-        if (!post) {
-          res.send("no player found")
-      } else {
-        console.log(post)
-        res.render("blog/search", {post})
-      }
-      })
-      .catch((error) => {
-        res.json({error})
-      })
+router.get("/search/:playername", (req,res) =>{
+  let username = req.session.username
+  playername = req.params.playername
+  //console.log(playername)
+  Post.findOne({name: playername})
+  .then((post) =>{
+    if (!post) {
+      res.send("no player found")
+    } else {
+      console.log(post)
+      res.render("blog/search", {post,username})
+    }
   })
-
-  router.post("/search/player", (req,res) =>{
-    playername = req.body.name
-    //console.log(playername)
-    res.redirect(`/home/search/${playername}`)
+  .catch((error) => {
+    res.json({error})
   })
+})
 
-  router.get("/profile", (req,res) => {
-    res.render("blog/profile")
+router.post("/search/player", (req,res) =>{
+  playername = req.body.name
+  //console.log(playername)
+  res.redirect(`/home/search/${playername}`)
+})
+
+router.get("/profile", (req,res) => {
+  let username = req.session.username
+  res.render("blog/profile", {username})
+})
+
+
+
+///// new  /////////////
+router.get("/new", (req, res) => {
+  let username = req.session.username
+  Player.find({})
+  .then((players) => {
+    //console.log(players)
+    res.render("blog/new", {players,username});
   })
+});
 
-  
-  
-  ///// new  /////////////
-  router.get("/new", (req, res) => {
-    Player.find({})
-    .then((players) => {
-      //console.log(players)
-      res.render("blog/new", {players});
+////user
+router.get("/user/:user", (req,res) =>{
+  let username = req.session.username
+  let user = req.params.user
+  User.find({username: user})
+    .populate('posts')
+    .populate('comments')
+    .exec(function(err, user){
+      console.log(user)
+      res.render('blog/profile', {user, username});
     })
-  });
-  
+})
 //////// Show ////////////////////
-  router.get("/:id", (req,res) => {
+router.get("/:id", (req,res) => {
       let username = req.session.username
       let id = req.params.id
       //console.log(id)
@@ -181,11 +186,12 @@ router.post("/:id/comments", (req,res) =>{
 ///// Edit ///////
 
 router.get("/:id/edit" ,(req,res) =>{
+  let username = req.session.username
   let id = req.params.id
   Post.findById(id)
   .then((post) => {
     
-    res.render("blog/edit", {post})
+    res.render("blog/edit", {post, username})
   })
 })
 

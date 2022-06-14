@@ -29,10 +29,12 @@ router.use((req, res, next) => {
 router.get("/user", (req,res) =>{
   let username = req.session.username
   User.find({username: username})
-    .populate('posts').exec(function(err, user) {
+    .populate('posts')
+    .populate('comments')
+    .exec(function(err, user){
       console.log(user)
       res.render('blog/profile', {user});
-});
+    })
 })
 
 ////// index route ///////////
@@ -114,6 +116,7 @@ router.get("/", (req, res) => {
 })
 //new comment
 router.post("/:id/comments", (req,res) =>{
+  let username = req.session.username
   let id = req.params.id
   let newComment = {
     commentId: id,
@@ -130,6 +133,10 @@ router.post("/:id/comments", (req,res) =>{
     .then((post) =>{
       console.log(post)
     })
+    User.findOneAndUpdate({username:username}, {$push: {comments: comment}})
+        .then((user) =>{
+           console.log(user)
+         })
     //console.log(newComment)
     res.redirect(`/home/${id}`)
   })

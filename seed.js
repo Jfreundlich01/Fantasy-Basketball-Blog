@@ -2551,7 +2551,7 @@ const playerSeed = [
     {
       id: 383,
       name: 'Jamal Murray',
-      nba: { start: 2016, pro: 5, team: 9 },
+      nba: { start: 2016, pro: 5, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '215',
       college: 'Kentucky',
@@ -2561,7 +2561,7 @@ const playerSeed = [
     {
       id: 787,
       name: 'Daniel Hamilton',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: null, inches: null },
       weight: null,
       college: null,
@@ -2571,7 +2571,7 @@ const playerSeed = [
     {
       id: 1341,
       name: 'Petr Cornelie',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '220',
       college: null,
@@ -2581,7 +2581,7 @@ const playerSeed = [
     {
       id: 176,
       name: 'Bryn Forbes',
-      nba: { start: 2016, pro: 5, team: 9 },
+      nba: { start: 2016, pro: 5, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '205',
       college: 'Michigan State',
@@ -2591,7 +2591,7 @@ const playerSeed = [
     {
       id: 1398,
       name: 'Josh Gray',
-      nba: { start: 2017, pro: 2, team: 9 },
+      nba: { start: 2017, pro: 2, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '180',
       college: 'Louisiana State',
@@ -2601,7 +2601,7 @@ const playerSeed = [
     {
       id: 770,
       name: 'P.J. Dozier',
-      nba: { start: 2017, pro: 4, team: 9 },
+      nba: { start: 2017, pro: 4, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '205',
       college: 'South Carolina',
@@ -2611,7 +2611,7 @@ const playerSeed = [
     {
       id: 845,
       name: 'Monte Morris',
-      nba: { start: 2017, pro: 4, team: 9 },
+      nba: { start: 2017, pro: 4, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '183',
       college: 'Iowa State',
@@ -2621,7 +2621,7 @@ const playerSeed = [
     {
       id: 1312,
       name: 'Vlatko Cancar',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: null, inches: null },
       weight: null,
       college: null,
@@ -2631,7 +2631,7 @@ const playerSeed = [
     {
       id: 865,
       name: 'Davon Reed',
-      nba: { start: 2017, pro: 2, team: 9 },
+      nba: { start: 2017, pro: 2, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '206',
       college: 'Miami',
@@ -2641,7 +2641,7 @@ const playerSeed = [
     {
       id: 1014,
       name: 'Michael Porter Jr.',
-      nba: { start: 2019, pro: 2, team: 9 },
+      nba: { start: 2019, pro: 2, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '218',
       college: 'Missouri',
@@ -2651,7 +2651,7 @@ const playerSeed = [
     {
       id: 2546,
       name: 'Matur Maker',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: null, inches: null },
       weight: null,
       college: null,
@@ -2661,7 +2661,7 @@ const playerSeed = [
     {
       id: 2077,
       name: 'Zylan Cheatham',
-      nba: { start: 2019, pro: 1, team: 9 },
+      nba: { start: 2019, pro: 1, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '220',
       college: 'Arizona State',
@@ -2671,7 +2671,7 @@ const playerSeed = [
     {
       id: 1849,
       name: 'Bol Bol',
-      nba: { start: 2019, pro: 2, team: 9 },
+      nba: { start: 2019, pro: 2, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '7', inches: '7' },
       weight: '220',
       college: 'Oregon',
@@ -2681,7 +2681,7 @@ const playerSeed = [
     {
       id: 2152,
       name: 'Rayjon Tucker',
-      nba: { start: 2019, pro: 2, team: 9 },
+      nba: { start: 2019, pro: 2, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '209',
       college: 'Arkansas-Little Rock',
@@ -2691,7 +2691,7 @@ const playerSeed = [
     {
       id: 2627,
       name: 'Zeke Nnaji',
-      nba: { start: 2020, pro: 1, team: 9 },
+      nba: { start: 2020, pro: 1, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '240',
       college: 'Arizona',
@@ -2701,7 +2701,7 @@ const playerSeed = [
     {
       id: 2601,
       name: 'Markus Howard',
-      nba: { start: 2020, pro: 1, team: 9 },
+      nba: { start: 2020, pro: 1, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '5', inches: '5' },
       weight: '175',
       college: 'Marquette',
@@ -2711,7 +2711,7 @@ const playerSeed = [
     {
       id: 2573,
       name: 'Facundo Campazzo',
-      nba: { start: 2020, pro: 1, team: 9 },
+      nba: { start: 2020, pro: 1, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '5', inches: '5' },
       weight: '195',
       college: 'Murcia',
@@ -2721,7 +2721,7 @@ const playerSeed = [
     {
       id: 3031,
       name: 'Eugene German',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '185',
       college: 'Northern Illinois'
@@ -2729,7 +2729,7 @@ const playerSeed = [
     {
       id: 3195,
       name: 'Matt Ryan',
-      nba: { start: 2021, pro: 0, team: 9 },
+      nba: { start: 2021, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '215',
       college: 'Tennessee-Chattanooga',
@@ -2739,7 +2739,7 @@ const playerSeed = [
     {
       id: 2816,
       name: 'Bones Hyland',
-      nba: { start: 2021, pro: 0, team: 9 },
+      nba: { start: 2021, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '169',
       college: 'Virginia Commonwealth',
@@ -2749,7 +2749,7 @@ const playerSeed = [
     {
       id: 3081,
       name: 'Carlik Jones',
-      nba: { start: 2021, pro: 0, team: 9 },
+      nba: { start: 2021, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '185',
       college: 'Louisville',
@@ -2759,7 +2759,7 @@ const playerSeed = [
     {
       id: 3379,
       name: 'Giorgi Bezhanishvili',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: null, inches: null },
       weight: null,
       college: null,
@@ -2769,7 +2769,7 @@ const playerSeed = [
     {
       id: 207,
       name: 'Jeff Green',
-      nba: { start: 2007, pro: 13, team: 9 },
+      nba: { start: 2007, pro: 13, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '235',
       college: 'Georgetown',
@@ -2779,7 +2779,7 @@ const playerSeed = [
     {
       id: 117,
       name: 'DeMarcus Cousins',
-      nba: { start: 2010, pro: 10, team: 9 },
+      nba: { start: 2010, pro: 10, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '270',
       college: 'Kentucky',
@@ -2789,7 +2789,7 @@ const playerSeed = [
     {
       id: 448,
       name: 'Austin Rivers',
-      nba: { start: 2012, pro: 9, team: 9 },
+      nba: { start: 2012, pro: 9, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '200',
       college: 'Duke',
@@ -2799,7 +2799,7 @@ const playerSeed = [
     {
       id: 38,
       name: 'Will Barton',
-      nba: { start: 2012, pro: 9, team: 9 },
+      nba: { start: 2012, pro: 9, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '181',
       college: 'Memphis',
@@ -2809,7 +2809,7 @@ const playerSeed = [
     {
       id: 206,
       name: 'JaMychal Green',
-      nba: { start: 2014, pro: 7, team: 9 },
+      nba: { start: 2014, pro: 7, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '227',
       college: 'Alabama',
@@ -2819,7 +2819,7 @@ const playerSeed = [
     {
       id: 160,
       name: 'James Ennis III',
-      nba: { start: 2014, pro: 0, team: 9 },
+      nba: { start: 2014, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: null, inches: null },
       weight: null,
       college: 'Cal State-Long Beach',
@@ -2829,7 +2829,7 @@ const playerSeed = [
     {
       id: 106,
       name: 'Semaj Christon',
-      nba: { start: 2016, pro: 0, team: 9 },
+      nba: { start: 2016, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '190',
       college: 'Xavier',
@@ -2839,7 +2839,7 @@ const playerSeed = [
     {
       id: 2976,
       name: 'Deonte Burton',
-      nba: { start: 0, pro: 2, team: 9 },
+      nba: { start: 0, pro: 2, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '240',
       college: 'Nevada'
@@ -2847,7 +2847,7 @@ const playerSeed = [
     {
       id: 195,
       name: 'Aaron Gordon',
-      nba: { start: 2014, pro: 7, team: 9 },
+      nba: { start: 2014, pro: 7, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '235',
       college: 'Arizona',
@@ -2857,7 +2857,7 @@ const playerSeed = [
     {
       id: 279,
       name: 'Nikola Jokic',
-      nba: { start: 2015, pro: 6, team: 9 },
+      nba: { start: 2015, pro: 6, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '284',
       college: 'Mega Basket',
@@ -2867,7 +2867,7 @@ const playerSeed = [
     {
       id: 56,
       name: 'Tarik Black',
-      nba: { start: 2014, pro: 4, team: 9 },
+      nba: { start: 2014, pro: 4, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '260',
       college: 'Kansas',
@@ -2877,7 +2877,7 @@ const playerSeed = [
     {
       id: 2936,
       name: 'Caleb Agada',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '209',
       college: 'Hapoel Beer Sheva'
@@ -2885,7 +2885,7 @@ const playerSeed = [
     {
       id: 2959,
       name: 'Giorgi Bezhanishvili',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '235',
       college: 'Illinois'
@@ -2893,7 +2893,7 @@ const playerSeed = [
     {
       id: 2960,
       name: 'Chudier Bile',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '195',
       college: 'Georgetown'
@@ -2901,7 +2901,7 @@ const playerSeed = [
     {
       id: 2975,
       name: 'Jason Burnell',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '220',
       college: 'Jacksonville State'
@@ -2909,7 +2909,7 @@ const playerSeed = [
     {
       id: 3139,
       name: 'Steffon Mitchell',
-      nba: { start: 0, pro: 0, team: 9 },
+      nba: { start: 0, pro: 0, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '220',
       college: 'Boston College'

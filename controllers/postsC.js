@@ -57,8 +57,12 @@ router.get("/", (req, res) => {
     //console.log(playername)
     Post.findOne({name: playername})
       .then((post) =>{
+        if (!post) {
+          res.send("no player found")
+      } else {
         console.log(post)
         res.render("blog/search", {post})
+      }
       })
       .catch((error) => {
         res.json({error})

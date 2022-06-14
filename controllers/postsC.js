@@ -52,6 +52,25 @@ router.get("/", (req, res) => {
       });
   });
 
+  router.get("/search/:playername", (req,res) =>{
+    playername = req.params.playername
+    //console.log(playername)
+    Post.findOne({name: playername})
+      .then((post) =>{
+        console.log(post)
+        res.render("blog/search", {post})
+      })
+      .catch((error) => {
+        res.json({error})
+      })
+  })
+
+  router.post("/search/player", (req,res) =>{
+    playername = req.body.name
+    //console.log(playername)
+    res.redirect(`/home/search/${playername}`)
+  })
+
   router.get("/profile", (req,res) => {
     res.render("blog/profile")
   })

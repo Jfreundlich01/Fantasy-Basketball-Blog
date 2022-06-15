@@ -46,12 +46,12 @@ router.get("/search/:playername", (req,res) =>{
   let username = req.session.username
   playername = req.params.playername
   //console.log(playername)
-  Post.findOne({name: playername})
+  Post.findOne({name: new RegExp(playername, 'i')})
   .then((post) =>{
     if (!post) {
       res.send("no player found")
     } else {
-      console.log(post)
+      //console.log(post)
       res.render("blog/search", {post,username})
     }
   })
@@ -183,6 +183,18 @@ router.post("/:id/comments", (req,res) =>{
   });
 })
 
+///// Like Comment /////////
+// router.get("/:postid/:commentid/like", (req,res) => {
+//   const postid = req.params.postid
+//   const commentid = req.params.commentid
+//   const post = Post.findById({postid})
+//     .then ((post) => {
+//       post.comments.forEach( comment =>{
+//         console.log(comment)
+//       })
+//     }
+//     )
+// })
 ///// Edit ///////
 
 router.get("/:id/edit" ,(req,res) =>{

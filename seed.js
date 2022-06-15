@@ -1052,7 +1052,7 @@ const playerSeed = [
     {
       id: 8,
       name: 'LaMarcus Aldridge',
-      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2983.png&w=350&h=254"
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2983.png&w=350&h=254",
       nba: { start: 2006, pro: 15, name: "Brooklyn Nets", nickname: "BKN" },
       height: { feets: '6', inches: '6' },
       weight: '250',

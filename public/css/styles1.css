@@ -11324,3 +11324,7 @@ textarea.form-control-lg {
   flex-direction: column;
   justify-content: center;
 }
+
+.hidden{
+  display: none
+}

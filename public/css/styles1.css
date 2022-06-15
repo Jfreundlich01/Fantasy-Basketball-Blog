@@ -11328,3 +11328,8 @@ textarea.form-control-lg {
 .hidden{
   display: none
 }
+
+.comments-flex {
+  display: flex;
+  flex-direction: row;
+}

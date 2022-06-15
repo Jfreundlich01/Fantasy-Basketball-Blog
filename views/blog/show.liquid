@@ -78,14 +78,19 @@
                                             <a class = usernameLink href="/home/user/{{comment.commentOwner.username}}"><div class="fw-bold">{{comment.commentOwner.username}}</div></a>
                                             <p class = "commentbody">{{comment.commentBody}}</p>
                                             <p>
-                                                <form action="/home/{{post._id}}/{{comment._id}}/like?_method=PUT" method="POST">
-                                                   <button type="submit" class="btn btn-primary btn-sm">Like</button><span class="m-2">{{comment.likes}}</span>
-                                                </form>
+                                                <div class="comments-flex">
+                                                    <form action="/home/{{post._id}}/{{comment._id}}/like?_method=PUT" method="POST">
+                                                       <button type="submit" class="btn btn-primary btn-sm">Like</button><span class="m-2">{{comment.likes}}</span>
+                                                    </form>
+                                                    <button class = "btn btn-outline-warning btn-sm" id="replyBut">Reply</button>
+                                                </div>
                                             
                                                 <div class="" id="">
-                                                    <button id="replyBut">Reply</button>
                                                     <form action="/home/{{post._id}}/{{comment._id}}/reply?_method=PUT" method="POST">
-                                                        <textarea class="hidden" name="reply" id="replyarea" cols="30" rows="2" value="reply"></textarea>
+                                                        <div class="hidden" id="replyarea">
+                                                            <textarea name="reply" cols="60" rows="2" value="reply"></textarea>
+                                                            <input type="submit" class="btn btn-outline-warning btn-sm" value ="Submit">
+                                                        </div>
                                                     </form>
                                                 </div>
                                             </p>
@@ -113,7 +118,6 @@
                 }
             </script>
             <!-- Core theme JS-->
-            <script src="js/scripts.js"></script>
         </body>
     </html>
     

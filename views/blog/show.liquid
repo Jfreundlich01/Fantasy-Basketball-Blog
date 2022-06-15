@@ -78,7 +78,7 @@
                                             <a class = usernameLink href="/home/user/{{comment.commentOwner.username}}"><div class="fw-bold">{{comment.commentOwner.username}}</div></a>
                                             <p class = "commentbody">{{comment.commentBody}}</p>
                                             <p>
-                                                <form action="/home/{{post._id}}/{{comment._id}}/like">
+                                                <form action="/home/{{post._id}}/{{comment._id}}/like?_method=PUT" method="POST">
                                                    <button type="submit" class="btn btn-primary btn-sm">Like</button><span class="m-2">{{comment.likes}}</span>
                                                 </form>
                                             </p>

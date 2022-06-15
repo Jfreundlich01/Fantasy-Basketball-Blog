@@ -11314,3 +11314,13 @@ textarea.form-control-lg {
   text-decoration: none;
   color: black
 }
+
+.comment {
+  border-bottom: 1px black solid;
+}
+
+.commentimg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -186,6 +186,7 @@ router.post("/:id/comments", (req,res) =>{
 ///// Like Comment /////////
 router.put("/:postid/:commentid/like", (req,res) => {
   const commentid = req.params.commentid
+  const postid = req.params.postid
   
   Comment.findOneAndUpdate({_id : commentid}, {$inc : {likes : 1}})
     .then((post) =>{
@@ -196,10 +197,14 @@ router.put("/:postid/:commentid/like", (req,res) => {
 // reply to Comment ////////
 router.put("/:postid/:commentid/reply", (req,res) => {
   const commentid = req.params.commentid
-  const reply = req.body.reply
+  const postid = req.params.postid
+  const reply = {
+    replyOwner: req.session.username,
+    replyBody: req.body.reply
+  }
   Comment.findOneAndUpdate({_id: commentid}, {$push: {replies: reply}})
         .then((reply) =>{
-          console.log(reply)
+          res.redirect(`/home/${postid}`)
         })
 })
 

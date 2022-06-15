@@ -21,7 +21,12 @@ const CommentSchema = new Schema({
         type: Number,
         default: 0
     },
-    replies: [String],
+    replies: [
+        {
+          replyOwner: String,
+          replyBody: String,
+        }
+    ]
 }, {
     timestamps: true
 })

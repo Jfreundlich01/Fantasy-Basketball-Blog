@@ -23,6 +23,9 @@ const userSchema = new Schema({
   comments: [
     { type: Schema.Types.ObjectId, ref: 'Comment' }
 ],
+replies: [
+  {type: Schema.Types.ObjectId, ref: 'Reply'}
+]
 });
 
 // make user model

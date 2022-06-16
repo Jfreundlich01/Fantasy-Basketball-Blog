@@ -87,9 +87,9 @@
                                                 </div>
                                             
                                                 <div class="" id="">
-                                                    <form action="/home/{{post._id}}/{{comment._id}}/reply?_method=PUT" method="POST">
+                                                    <form action="/home/{{post._id}}/{{comment._id}}/reply?_method=POST" method="POST">
                                                         <div class="hidden" id="replyarea">
-                                                            <textarea name="reply" cols="60" rows="2" value="reply"></textarea>
+                                                            <textarea name="replyBody" cols="60" rows="2" value="reply"></textarea>
                                                             <input type="submit" class="btn btn-outline-warning btn-sm" value ="Submit">
                                                         </div>
                                                     </form>
@@ -100,7 +100,8 @@
                                         <div class="reply">
                                             <div class="ms-3">
                                                 {% for reply in comment.replies%}
-                                                <a href="/home/user{{reply.replyOwner}}"><div>{{reply.replyOwner}}</div></a>
+                                                <img class="commentimg rounded-circle" src="{{reply.replyOwner.propic}}" width="30" alt="..." />
+                                                <a href="/home/user{{reply.replyOwner.username}}"><div>{{reply.replyOwner.username}}</div></a>
                                                 <p>{{reply.replyBody}}</p>
                                                 {%endfor%}
 

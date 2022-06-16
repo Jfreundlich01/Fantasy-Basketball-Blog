@@ -9,6 +9,7 @@ const mongoose = require('./connection.js')
 // pull schema and model from mongoose
 const { Schema, model } = mongoose;
 
+
 //makle Posts Schema
 const CommentSchema = new Schema({
     commentId: String,
@@ -22,11 +23,8 @@ const CommentSchema = new Schema({
         default: 0
     },
     replies: [
-        {
-          replyOwner: String,
-          replyBody: String,
-        }
-    ]
+        {type: Schema.Types.ObjectId, ref: 'Reply'}
+      ]
 }, {
     timestamps: true
 })

@@ -100,9 +100,11 @@
                                         <div class="reply">
                                             <div class="ms-3">
                                                 {% for reply in comment.replies%}
-                                                <img class="commentimg rounded-circle" src="{{reply.replyOwner.propic}}" width="30" alt="..." />
-                                                <a href="/home/user{{reply.replyOwner.username}}"><div>{{reply.replyOwner.username}}</div></a>
+                                                <div class= user-box>
+                                                <div class="replyimg flex-shrink-0"><img class="commentimg rounded-circle" src="{{reply.replyOwner.propic}}" width="30" alt="..." /></div>
+                                                <a href="/home/user{{reply.replyOwner.username}}"><div class="replyOwner">{{reply.replyOwner.username}}</div></a>
                                                 <p>{{reply.replyBody}}</p>
+                                                </div>
                                                 {%endfor%}
 
                                             </div>

@@ -105,7 +105,6 @@ router.get("/:id", (req, res) => {
       path: 'comments',
       populate: {
         path: 'replies',
-        model: 'Reply'
       } 
    })
     .exec(function (err, post) {

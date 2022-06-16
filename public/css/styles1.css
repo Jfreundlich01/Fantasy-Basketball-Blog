@@ -11339,5 +11339,18 @@ textarea.form-control-lg {
 }
 
 .reply{
-  padding-left: 8vw;
+  padding-left: 4vw;
+}
+
+.replyimg{
+  margin-right: 1vw;
+}
+
+.replyOwner{
+  margin-right: 1vw
+}
+
+.user-box a{
+  text-decoration: none;
+  color: black;
 }

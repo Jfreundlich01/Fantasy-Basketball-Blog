@@ -4732,6 +4732,7 @@ const playerSeed = [
 {
   id: 842,
   name: 'Malik Monk',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066262.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '200',
@@ -4762,6 +4763,7 @@ const playerSeed = [
 {
   id: 1007,
   name: 'Kendrick Nunn',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3056247.png&w=350&h=254",
   nba: { start: 2019, pro: 2, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '190',
@@ -4802,6 +4804,7 @@ const playerSeed = [
 {
   id: 1867,
   name: 'Talen Horton-Tucker',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4396991.png&w=350&h=254",
   nba: { start: 2019, pro: 2, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '234',
@@ -4950,6 +4953,7 @@ const playerSeed = [
 {
   id: 544,
   name: 'Russell Westbrook',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3468.png&w=350&h=254",
   nba: { start: 2008, pro: 13, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '200',
@@ -5020,6 +5024,7 @@ const playerSeed = [
 {
   id: 126,
   name: 'Anthony Davis',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6583.png&w=350&h=254",
   nba: { start: 2012, pro: 9, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '253',
@@ -5051,6 +5056,7 @@ const playerSeed = [
 {
   id: 21,
   name: 'Carmelo Anthony',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1975.png&w=350&h=254",
   nba: { start: 2003, pro: 18, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '238',
@@ -5085,6 +5091,7 @@ const playerSeed = [
 {
   id: 250,
   name: 'Dwight Howard',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2384.png&w=350&h=254",
   nba: { start: 2004, pro: 17, name: "Los Angeles Lakers", nickname: "LAL" },
   height: { feets: '6', inches: '6' },
   weight: '265',

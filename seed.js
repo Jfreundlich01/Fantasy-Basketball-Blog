@@ -2,6 +2,7 @@ const playerSeed = [
   {
     id: 553,
     name: 'Lou Williams',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2799.png&w=350&h=254",
     nba: { start: 2005, pro: 16, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '175',
@@ -22,6 +23,7 @@ const playerSeed = [
   {
     id: 564,
     name: 'Delon Wright',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064447.png&w=350&h=254",
     nba: { start: 2015, pro: 6, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '185',
@@ -52,6 +54,7 @@ const playerSeed = [
   {
     id: 761,
     name: 'John Collins',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3908845.png&w=350&h=254",
     nba: { start: 2017, pro: 4, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '226',
@@ -92,6 +95,7 @@ const playerSeed = [
   {
     id: 980,
     name: 'Kevin Huerter',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066372.png&w=350&h=254",
     nba: { start: 2018, pro: 3, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '198',
@@ -102,6 +106,7 @@ const playerSeed = [
   {
     id: 987,
     name: 'Kevin Knox II',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278075.png&w=350&h=254",
     nba: { start: 2018, pro: 3, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '215',
@@ -112,6 +117,7 @@ const playerSeed = [
   {
     id: 1046,
     name: 'Trae Young',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277905.png&w=350&h=254",
     nba: { start: 2018, pro: 3, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '164',
@@ -193,6 +199,7 @@ const playerSeed = [
   {
     id: 1868,
     name: "De'Andre Hunter",
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4065732.png&w=350&h=254",
     nba: { start: 2019, pro: 2, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '221',
@@ -223,6 +230,7 @@ const playerSeed = [
   {
     id: 2629,
     name: 'Onyeka Okongwu',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431680.png&w=350&h=254",
     nba: { start: 2020, pro: 1, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '240',
@@ -321,6 +329,7 @@ const playerSeed = [
   {
     id: 181,
     name: 'Danilo Gallinari',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3428.png&w=350&h=254",
     nba: { start: 2008, pro: 12, name: "Atlanta Hawks", nickname: "ATL" },
     height: { feets: '6', inches: '6' },
     weight: '236',
@@ -371,6 +380,7 @@ const playerSeed = [
   {
     id: 92,
     name: 'Clint Capela',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3102529.png&w=350&h=254",
     nba: { start: 2014, pro: 7, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '256',
@@ -381,6 +391,7 @@ const playerSeed = [
   {
     id: 743,
     name: 'Bogdan Bogdanovic',
+    image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3037789.png&w=350&h=254",
     nba: { start: 2017, pro: 4, name: "Atlanta Hawks", nickname: "ATL"},
     height: { feets: '6', inches: '6' },
     weight: '225',
@@ -1208,6 +1219,7 @@ const playerSeed = [
     {
       id: 407,
       name: 'Kelly Oubre Jr.',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3133603.png&w=350&h=254",
       nba: { start: 2015, pro: 6, name: "Charlotte Hornets", nickname: "CHA" },
       height: { feets: '6', inches: '6' },
       weight: '203',
@@ -1218,6 +1230,7 @@ const playerSeed = [
     {
       id: 458,
       name: 'Terry Rozier',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3074752.png&w=350&h=254",
       nba: { start: 2015, pro: 6, name: "Charlotte Hornets", nickname: "CHA" },
       height: { feets: '6', inches: '6' },
       weight: '190',
@@ -1258,6 +1271,7 @@ const playerSeed = [
     {
       id: 1897,
       name: 'P.J. Washington',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278078.png&w=350&h=254",
       nba: { start: 2019, pro: 2, name: "Charlotte Hornets", nickname: "CHA" },
       height: { feets: '6', inches: '6' },
       weight: '230',
@@ -1306,6 +1320,7 @@ const playerSeed = [
     {
       id: 2566,
       name: 'LaMelo Ball',
+      images: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432816.png&w=350&h=254",
       nba: { start: 2020, pro: 1, name: "Charlotte Hornets", nickname: "CHA" },
       height: { feets: '6', inches: '6' },
       weight: '180',
@@ -1366,6 +1381,7 @@ const playerSeed = [
     {
       id: 2793,
       name: 'James Bouknight',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4431712.png&w=350&h=254",
       nba: { start: 2021, pro: 0, name: "Charlotte Hornets", nickname: "CHA" },
       height: { feets: '6', inches: '6' },
       weight: '190',
@@ -1434,6 +1450,7 @@ const playerSeed = [
     {
       id: 227,
       name: 'Gordon Hayward',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4249.png&w=350&h=254",
       nba: { start: 2010, pro: 11, name: "Charlotte Hornets", nickname: "CHA" },
       height: { feets: '6', inches: '6' },
       weight: '225',
@@ -1464,6 +1481,7 @@ const playerSeed = [
     {
       id: 426,
       name: 'Mason Plumlee',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2488653.png&w=350&h=254",
       nba: { start: 2013, pro: 8, name: "Charlotte Hornets", nickname: "CHA" },
       height: { feets: '6', inches: '6' },
       weight: '254',
@@ -2150,6 +2168,7 @@ const playerSeed = [
     {
       id: 459,
       name: 'Ricky Rubio',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4011.png&w=350&h=254",
       nba: { start: 2011, pro: 10, name: "Cleveland Cavaliers", nickname: "CLE" },
       height: { feets: '6', inches: '6' },
       weight: '190',
@@ -2569,6 +2588,7 @@ const playerSeed = [
     {
       id: 383,
       name: 'Jamal Murray',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3936299.png&w=350&h=254",
       nba: { start: 2016, pro: 5, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '215',
@@ -2629,6 +2649,7 @@ const playerSeed = [
     {
       id: 845,
       name: 'Monte Morris',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3059310.png&w=350&h=254",
       nba: { start: 2017, pro: 4, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '183',
@@ -2659,6 +2680,7 @@ const playerSeed = [
     {
       id: 1014,
       name: 'Michael Porter Jr.',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278104.png&w=350&h=254",
       nba: { start: 2019, pro: 2, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '218',
@@ -2817,6 +2839,7 @@ const playerSeed = [
     {
       id: 38,
       name: 'Will Barton',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6579.png&w=350&h=254",
       nba: { start: 2012, pro: 9, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '181',
@@ -2827,6 +2850,7 @@ const playerSeed = [
     {
       id: 206,
       name: 'JaMychal Green',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2327577.png&w=350&h=254",
       nba: { start: 2014, pro: 7, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '227',
@@ -2865,6 +2889,7 @@ const playerSeed = [
     {
       id: 195,
       name: 'Aaron Gordon',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3064290.png&w=350&h=254",
       nba: { start: 2014, pro: 7, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '235',
@@ -2875,6 +2900,7 @@ const playerSeed = [
     {
       id: 279,
       name: 'Nikola Jokic',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png&w=350&h=254",
       nba: { start: 2015, pro: 6, name: "Denver Nuggets", nickname: "DEN" },
       height: { feets: '6', inches: '6' },
       weight: '284',
@@ -2985,6 +3011,7 @@ const playerSeed = [
     {
       id: 931,
       name: 'Marvin Bagley III',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277848.png&w=350&h=254",
       nba: { start: 2018, pro: 3, name: "Detroit Pistons", nickname: "DET" },
       height: { feets: '6', inches: '6' },
       weight: '235',
@@ -3155,6 +3182,7 @@ const playerSeed = [
     {
       id: 2801,
       name: 'Cade Cunningham',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432166.png&w=350&h=254",
       nba: { start: 2021, pro: 0, name: "Detroit Pistons", nickname: "DET" },
       height: { feets: '6', inches: '6' },
       weight: '220',
@@ -3203,6 +3231,7 @@ const playerSeed = [
     {
       id: 287,
       name: 'Cory Joseph',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6446.png&w=350&h=254",
       nba: { start: 2011, pro: 10, name: "Detroit Pistons", nickname: "DET" },
       height: { feets: '6', inches: '6' },
       weight: '200',
@@ -3223,6 +3252,7 @@ const playerSeed = [
     {
       id: 404,
       name: 'Kelly Olynyk',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2489663.png&w=350&h=254",
       nba: { start: 2013, pro: 8, name: "Detroit Pistons", nickname: "DET" },
       height: { feets: '6', inches: '6' },
       weight: '240',
@@ -3233,6 +3263,7 @@ const playerSeed = [
     {
       id: 700,
       name: 'Grant Jerrett',
+      image: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991070.png&w=350&h=254',
       nba: { start: 0, pro: 0, name: "Detroit Pistons", nickname: "DET" },
       height: { feets: null, inches: null },
       weight: null,
@@ -3385,6 +3416,7 @@ const playerSeed = [
     {
       id: 1887,
       name: 'Jordan Poole',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277956.png&w=350&h=254",
       nba: { start: 2019, pro: 2, name: "Golden State Warriors", nickname: "GSW" },
       height: { feets: '6', inches: '6' },
       weight: '194',
@@ -3576,6 +3608,7 @@ const playerSeed = [
     {
       id: 514,
       name: 'Klay Thompson',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6475.png&w=350&h=254",
       nba: { start: 2011, pro: 8, name: "Golden State Warriors", nickname: "GSW" },
       height: { feets: '6', inches: '6' },
       weight: '220',
@@ -3586,6 +3619,7 @@ const playerSeed = [
     {
       id: 204,
       name: 'Draymond Green',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6589.png&w=350&h=254",
       nba: { start: 2012, pro: 9, name: "Golden State Warriors", nickname: "GSW" },
       height: { feets: '6', inches: '6' },
       weight: '230',
@@ -3606,6 +3640,7 @@ const playerSeed = [
     {
       id: 548,
       name: 'Andrew Wiggins',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3059319.png&w=350&h=254",
       nba: { start: 2014, pro: 7, name: "Golden State Warriors", nickname: "GSW" },
       height: { feets: '6', inches: '6' },
       weight: '197',
@@ -3642,6 +3677,7 @@ const playerSeed = [
     {
       id: 256,
       name: 'Andre Iguodala',
+      image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2386.png&w=350&h=254",
       nba: { start: 2004, pro: 17, name: "Golden State Warriors", nickname: "GSW" },
       height: { feets: '6', inches: '6' },
       weight: '215',
@@ -3968,6 +4004,7 @@ const playerSeed = [
 {
   id: 522,
   name: 'Myles Turner',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3133628.png&w=350&h=254",
   nba: { start: 2015, pro: 6, name: "Indiana Pacers", nickname: "IND" },
   height: { feets: '6', inches: '6' },
   weight: '250',
@@ -4019,6 +4056,7 @@ const playerSeed = [
 {
   id: 71,
   name: 'Malcolm Brogdon',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2566769.png&w=350&h=254",
   nba: { start: 2016, pro: 5, name: "Indiana Pacers", nickname: "IND" },
   height: { feets: '6', inches: '6' },
   weight: '229',
@@ -4328,6 +4366,7 @@ const playerSeed = [
 {
   id: 540,
   name: 'T.J. Warren',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2982334.png&w=350&h=254",
   nba: { start: 2014, pro: 7, name: "Indiana Pacers", nickname: "IND" },
   height: { feets: '6', inches: '6' },
   weight: '220',
@@ -4338,6 +4377,7 @@ const playerSeed = [
 {
   id: 348,
   name: 'T.J. McConnell',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2530530.png&w=350&h=254",
   nba: { start: 2015, pro: 6, name: "Indiana Pacers", nickname: "IND" },
   height: { feets: '6', inches: '6' },
   weight: '190',
@@ -4358,6 +4398,7 @@ const playerSeed = [
 {
   id: 434,
   name: 'Norman Powell',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2595516.png&w=350&h=254",
   nba: { start: 2015, pro: 6, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '6', inches: '6' },
   weight: '215',
@@ -4368,6 +4409,7 @@ const playerSeed = [
 {
   id: 575,
   name: 'Ivica Zubac',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4017837.png&w=350&h=254",
   nba: { start: 2016, pro: 5, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '7', inches: '7' },
   weight: '240',
@@ -4566,6 +4608,7 @@ const playerSeed = [
 {
   id: 255,
   name: 'Serge Ibaka',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3439.png&w=350&h=254",
   nba: { start: 2009, pro: 12, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '6', inches: '6' },
   weight: '235',
@@ -4586,6 +4629,7 @@ const playerSeed = [
 {
   id: 189,
   name: 'Paul George',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4251.png&w=350&h=254",
   nba: { start: 2010, pro: 11, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '6', inches: '6' },
   weight: '220',
@@ -4606,6 +4650,7 @@ const playerSeed = [
 {
   id: 373,
   name: 'Marcus Morris Sr.',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6462.png&w=350&h=254",
   nba: { start: 2011, pro: 10, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '6', inches: '6' },
   weight: '218',
@@ -4616,6 +4661,7 @@ const playerSeed = [
 {
   id: 314,
   name: 'Kawhi Leonard',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6450.png&w=350&h=254",
   nba: { start: 2011, pro: 10, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '6', inches: '6' },
   weight: '225',
@@ -4626,6 +4672,7 @@ const playerSeed = [
 {
   id: 264,
   name: 'Reggie Jackson',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6443.png&w=350&h=254",
   nba: { start: 2011, pro: 10, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '6', inches: '6' },
   weight: '208',
@@ -4636,6 +4683,7 @@ const playerSeed = [
 {
   id: 118,
   name: 'Robert Covington',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2490620.png&w=350&h=254",
   nba: { start: 2013, pro: 8, name: "LA Clippers", nickname: "LAC" },
   height: { feets: '6', inches: '6' },
   weight: '209',
@@ -5067,6 +5115,7 @@ const playerSeed = [
 {
   id: 152,
   name: 'Kris Dunn',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991139.png&w=350&h=254",
   nba: { start: 2016, pro: 0, name: "Memphis Grizzlies", nickname: "MEM" },
   height: { feets: null, inches: null },
   weight: null,
@@ -5390,6 +5439,7 @@ const playerSeed = [
 {
   id: 724,
   name: 'Bam Adebayo',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066261.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Miami Heat", nickname: "MIA" },
   height: { feets: '6', inches: '6' },
   weight: '255',
@@ -5430,6 +5480,7 @@ const playerSeed = [
 {
   id: 1018,
   name: 'Duncan Robinson',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3157465.png&w=350&h=254",
   nba: { start: 2018, pro: 3, name: "Miami Heat", nickname: "MIA" },
   height: { feets: '6', inches: '6' },
   weight: '215',
@@ -5480,6 +5531,7 @@ const playerSeed = [
 {
   id: 1866,
   name: 'Tyler Herro',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395725.png&w=350&h=254",
   nba: { start: 2019, pro: 2, name: "Miami Heat", nickname: "MIA" },
   height: { feets: '6', inches: '6' },
   weight: '195',
@@ -5618,6 +5670,7 @@ const playerSeed = [
 {
   id: 327,
   name: 'Kyle Lowry',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3012.png&w=350&h=254",
   nba: { start: 2006, pro: 15, name: "Miami Heat", nickname: "MIA" },
   height: { feets: '6', inches: '6' },
   weight: '196',
@@ -5628,6 +5681,7 @@ const playerSeed = [
 {
   id: 520,
   name: 'P.J. Tucker',
+  image: "https://www.espn.com/nba/player/_/id/3033/pj-tucker",
   nba: { start: 2006, pro: 10, name: "Miami Heat", nickname: "MIA" },
   height: { feets: '6', inches: '6' },
   weight: '245',
@@ -5658,6 +5712,7 @@ const playerSeed = [
 {
   id: 86,
   name: 'Jimmy Butler',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6430.png&w=350&h=254",
   nba: { start: 2011, pro: 10, name: "Miami Heat", nickname: "MIA" },
   height: { feets: '6', inches: '6' },
   weight: '230',
@@ -5733,6 +5788,7 @@ const playerSeed = [
 {
   id: 431,
   name: 'Bobby Portis',
+  image: "https://www.espn.com/nba/player/_/id/3064482/bobby-portis",
   nba: { start: 2015, pro: 6, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '6', inches: '6' },
   weight: '250',
@@ -5743,6 +5799,7 @@ const playerSeed = [
 {
   id: 115,
   name: 'Pat Connaughton',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2578239.png&w=350&h=254",
   nba: { start: 2015, pro: 6, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '6', inches: '6' },
   weight: '209',
@@ -5783,6 +5840,7 @@ const playerSeed = [
 {
   id: 926,
   name: 'Grayson Allen',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3135045.png&w=350&h=254",
   nba: { start: 2018, pro: 3, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '6', inches: '6' },
   weight: '198',
@@ -6001,6 +6059,7 @@ const playerSeed = [
 {
   id: 323,
   name: 'Brook Lopez',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3448.png&w=350&h=254",
   nba: { start: 2008, pro: 13, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '7', inches: '7' },
   weight: '282',
@@ -6021,6 +6080,7 @@ const playerSeed = [
 {
   id: 237,
   name: 'George Hill',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3438.png&w=350&h=254",
   nba: { start: 2008, pro: 13, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '6', inches: '6' },
   weight: '188',
@@ -6031,6 +6091,7 @@ const playerSeed = [
 {
   id: 242,
   name: 'Jrue Holiday',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3995.png&w=350&h=254",
   nba: { start: 2009, pro: 12, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '6', inches: '6' },
   weight: '205',
@@ -6071,6 +6132,7 @@ const playerSeed = [
 {
   id: 361,
   name: 'Khris Middleton',
+  image: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6609.png&w=350&h=254',
   nba: { start: 2012, pro: 9, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '6', inches: '6' },
   weight: '222',
@@ -6081,6 +6143,7 @@ const playerSeed = [
 {
   id: 20,
   name: 'Giannis Antetokounmpo',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png&w=350&h=254",
   nba: { start: 2013, pro: 8, name: "Milwaukee Bucks", nickname: "MIL" },
   height: { feets: '6', inches: '6' },
   weight: '242',
@@ -6171,6 +6234,7 @@ const playerSeed = [
 {
   id: 462,
   name: "D'Angelo Russell",
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136776.png&w=350&h=254",
   nba: { start: 2015, pro: 6, name: "Minnesota Timberwolves", nickname: "MIN" },
   height: { feets: '6', inches: '6' },
   weight: '193',
@@ -6181,6 +6245,7 @@ const playerSeed = [
 {
   id: 519,
   name: 'Karl-Anthony Towns',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136195.png&w=350&h=254",
   nba: { start: 2015, pro: 6, name: "Minnesota Timberwolves", nickname: "MIN" },
   height: { feets: '6', inches: '6' },
   weight: '248',
@@ -6201,6 +6266,7 @@ const playerSeed = [
 {
   id: 46,
   name: 'Malik Beasley',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3907822.png&w=350&h=254",
   nba: { start: 2016, pro: 5, name: "Minnesota Timberwolves", nickname: "MIN" },
   height: { feets: '6', inches: '6' },
   weight: '187',
@@ -6211,6 +6277,7 @@ const playerSeed = [
 {
   id: 437,
   name: 'Taurean Prince',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2990962.png&w=350&h=254",
   nba: { start: 2016, pro: 5, name: "Minnesota Timberwolves", nickname: "MIN" },
   height: { feets: '6', inches: '6' },
   weight: '218',
@@ -6369,6 +6436,7 @@ const playerSeed = [
 {
   id: 2584,
   name: 'Anthony Edwards',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4594268.png&w=350&h=254",
   nba: { start: 2020, pro: 1, name: "Minnesota Timberwolves", nickname: "MIN" },
   height: { feets: '6', inches: '6' },
   weight: '225',
@@ -6449,6 +6517,7 @@ const playerSeed = [
 {
   id: 53,
   name: 'Patrick Beverley',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3964.png&w=350&h=254",
   nba: { start: 2012, pro: 9, name: "Minnesota Timberwolves", nickname: "MIN" },
   height: { feets: '6', inches: '6' },
   weight: '180',
@@ -6522,16 +6591,6 @@ const playerSeed = [
   college: 'Gran Canaria',
   pos: null,
   jersey: 18
-},
-{
-  id: 791,
-  name: 'Josh Hart',
-  nba: { start: 2017, pro: 4, name: "New Orleans Pelicans", nickname: "NOP" },
-  height: { feets: '6', inches: '6' },
-  weight: '215',
-  college: 'Villanova',
-  pos: 'G',
-  jersey: 11
 },
 {
   id: 973,
@@ -6896,16 +6955,6 @@ const playerSeed = [
   jersey: 21
 },
 {
-  id: 987,
-  name: 'Kevin Knox II',
-  nba: { start: 2018, pro: 3, name: "New York Knicks", nickname: "NYK" },
-  height: { feets: '6', inches: '6' },
-  weight: '215',
-  college: 'Kentucky',
-  pos: 'F',
-  jersey: 5
-},
-{
   id: 1020,
   name: 'Mitchell Robinson',
   nba: { start: 2018, pro: 3, name: "New York Knicks", nickname: "NYK" },
@@ -7192,6 +7241,7 @@ const playerSeed = [
 {
   id: 972,
   name: 'Shai Gilgeous-Alexander',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278073.png&w=350&h=254",
   nba: { start: 2018, pro: 3, name: "Oklahoma City Thunder", nickname: "OKC" },
   height: { feets: '6', inches: '6' },
   weight: '180',
@@ -7456,6 +7506,7 @@ const playerSeed = [
 {
   id: 169,
   name: 'Derrick Favors',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4257.png&w=350&h=254",
   nba: { start: 2010, pro: 11, name: "Oklahoma City Thunder", nickname: "OKC" },
   height: { feets: '6', inches: '6' },
   weight: '265',
@@ -7486,6 +7537,7 @@ const playerSeed = [
 {
   id: 779,
   name: 'Markelle Fultz',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066636.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '6', inches: '6' },
   weight: '209',
@@ -7496,6 +7548,7 @@ const playerSeed = [
 {
   id: 801,
   name: 'Jonathan Isaac',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4065654.png&w=350&h=254",
   nba: { start: 2017, pro: 3, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '6', inches: '6' },
   weight: '230',
@@ -7526,6 +7579,7 @@ const playerSeed = [
 {
   id: 932,
   name: 'Mo Bamba',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277919.png&w=350&h=254",
   nba: { start: 2018, pro: 3, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '7', inches: '7' },
   weight: '231',
@@ -7536,6 +7590,7 @@ const playerSeed = [
 {
   id: 950,
   name: 'Wendell Carter Jr.',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277847.png&w=350&h=254",
   nba: { start: 2018, pro: 3, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '6', inches: '6' },
   weight: '270',
@@ -7710,6 +7765,7 @@ const playerSeed = [
 {
   id: 2858,
   name: 'Franz Wagner',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4566434.png&w=350&h=254",
   nba: { start: 2021, pro: 0, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '6', inches: '6' },
   weight: '220',
@@ -7720,6 +7776,7 @@ const playerSeed = [
 {
   id: 2852,
   name: 'Jalen Suggs',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432165.png&w=350&h=254",
   nba: { start: 2021, pro: 0, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '6', inches: '6' },
   weight: '205',
@@ -7770,6 +7827,7 @@ const playerSeed = [
 {
   id: 457,
   name: 'Terrence Ross',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6619.png&w=350&h=254",
   nba: { start: 2012, pro: 9, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '6', inches: '6' },
   weight: '206',
@@ -7800,6 +7858,7 @@ const playerSeed = [
 {
   id: 220,
   name: 'Gary Harris',
+  image: 'https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2999547.png&w=350&h=254',
   nba: { start: 2014, pro: 7, name: "Orlando Magic", nickname: "ORL" },
   height: { feets: '6', inches: '6' },
   weight: '210',
@@ -8568,16 +8627,6 @@ const playerSeed = [
   jersey: 26
 },
 {
-  id: 434,
-  name: 'Norman Powell',
-  nba: { start: 2015, pro: 6, name: "Portland Trail Blazers", nickname: "POR" },
-  height: { feets: '6', inches: '6' },
-  weight: '215',
-  college: 'UCLA',
-  pos: 'G',
-  jersey: 24
-},
-{
   id: 581,
   name: 'Quinn Cook',
   nba: { start: 0, pro: 0, name: "Portland Trail Blazers", nickname: "POR" },
@@ -8630,6 +8679,7 @@ const playerSeed = [
 {
   id: 791,
   name: 'Josh Hart',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3062679.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Portland Trail Blazers", nickname: "POR" },
   height: { feets: '6', inches: '6' },
   weight: '215',
@@ -8850,6 +8900,7 @@ const playerSeed = [
 {
   id: 59,
   name: 'Eric Bledsoe',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4238.png&w=350&h=254",
   nba: { start: 2010, pro: 11, name: "Portland Trail Blazers", nickname: "POR" },
   height: { feets: '6', inches: '6' },
   weight: '214',
@@ -8870,6 +8921,7 @@ const playerSeed = [
 {
   id: 319,
   name: 'Damian Lillard',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png&w=350&h=254",
   nba: { start: 2012, pro: 9, name: "Portland Trail Blazers", nickname: "POR" },
   height: { feets: '6', inches: '6' },
   weight: '195',
@@ -8930,6 +8982,7 @@ const playerSeed = [
 {
   id: 398,
   name: 'Jusuf Nurkic',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3102530.png&w=350&h=254",
   nba: { start: 2014, pro: 7, name: "Portland Trail Blazers", nickname: "POR" },
   height: { feets: '6', inches: '6' },
   weight: '290',
@@ -8988,6 +9041,7 @@ const playerSeed = [
 {
   id: 236,
   name: 'Buddy Hield',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2990984.png&w=350&h=254",
   nba: { start: 2016, pro: 5, name: "Sacramento Kings", nickname: "SAC" },
   height: { feets: '6', inches: '6' },
   weight: '220',
@@ -10026,6 +10080,7 @@ const playerSeed = [
 {
   id: 851,
   name: "Royce O'Neale",
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2583632.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Utah Jazz", nickname: "UTA" },
   height: { feets: '6', inches: '6' },
   weight: '226',
@@ -10076,6 +10131,7 @@ const playerSeed = [
 {
   id: 840,
   name: 'Donovan Mitchell',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3908809.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Utah Jazz", nickname: "UTA" },
   height: { feets: '6', inches: '6' },
   weight: '215',
@@ -10284,6 +10340,7 @@ const playerSeed = [
 {
   id: 114,
   name: 'Mike Conley',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3195.png&w=350&h=254",
   nba: { start: 2007, pro: 14, name: "Utah Jazz", nickname: "UTA" },
   height: { feets: '6', inches: '6' },
   weight: '175',
@@ -10314,6 +10371,7 @@ const playerSeed = [
 {
   id: 60,
   name: 'Bojan Bogdanovic',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3593.png&w=350&h=254",
   nba: { start: 2014, pro: 7, name: "Utah Jazz", nickname: "UTA" },
   height: { feets: '6', inches: '6' },
   weight: '226',
@@ -10334,6 +10392,7 @@ const playerSeed = [
 {
   id: 192,
   name: 'Rudy Gobert',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032976.png&w=350&h=254",
   nba: { start: 2013, pro: 8, name: "Utah Jazz", nickname: "UTA" },
   height: { feets: '7', inches: '7' },
   weight: '258',
@@ -10354,6 +10413,7 @@ const playerSeed = [
 {
   id: 109,
   name: 'Jordan Clarkson',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528426.png&w=350&h=254",
   nba: { start: 2014, pro: 7, name: "Utah Jazz", nickname: "UTA" },
   height: { feets: '6', inches: '6' },
   weight: '194',
@@ -10364,6 +10424,7 @@ const playerSeed = [
 {
   id: 258,
   name: 'Joe Ingles',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2968436.png&w=350&h=254",
   nba: { start: 2014, pro: 7, name: "Utah Jazz", nickname: "UTA" },
   height: { feets: '6', inches: '6' },
   weight: '220',
@@ -10390,6 +10451,7 @@ const playerSeed = [
 {
   id: 218,
   name: 'Montrezl Harrell',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2991055.png&w=350&h=254",
   nba: { start: 2015, pro: 6, name: "Washington Wizards", nickname: "WAS" },
   height: { feets: '6', inches: '6' },
   weight: '240',
@@ -10400,6 +10462,7 @@ const playerSeed = [
 {
   id: 820,
   name: 'Kyle Kuzma',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3134907.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Washington Wizards", nickname: "WAS" },
   height: { feets: '6', inches: '6' },
   weight: '221',
@@ -10410,6 +10473,7 @@ const playerSeed = [
 {
   id: 753,
   name: 'Thomas Bryant',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3934723.png&w=350&h=254",
   nba: { start: 2017, pro: 4, name: "Washington Wizards", nickname: "WAS" },
   height: { feets: '6', inches: '6' },
   weight: '248',
@@ -10696,6 +10760,7 @@ const playerSeed = [
 {
   id: 45,
   name: 'Bradley Beal',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6580.png&w=350&h=254",
   nba: { start: 2012, pro: 9, name: "Washington Wizards", nickname: "WAS" },
   height: { feets: '6', inches: '6' },
   weight: '207',
@@ -10716,6 +10781,7 @@ const playerSeed = [
 {
   id: 89,
   name: 'Kentavious Caldwell-Pope',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2581018.png&w=350&h=254",
   nba: { start: 2013, pro: 8, name: "Washington Wizards", nickname: "WAS" },
   height: { feets: '6', inches: '6' },
   weight: '204',
@@ -10746,6 +10812,7 @@ const playerSeed = [
 {
   id: 432,
   name: 'Kristaps Porzingis',
+  image: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3102531.png&w=350&h=254",
   nba: { start: 2015, pro: 5, name: "Washington Wizards", nickname: "WAS" },
   height: { feets: '7', inches: '7' },
   weight: '240',

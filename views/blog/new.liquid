@@ -12,7 +12,7 @@
     		<form action="/home" method="POST">
     		    <div class="form-group">
     		        <label for="title">Player <span class="require">*</span></label>
-    		        <select id="players" name="name">
+    		        <select id="players" name="name" required>
                     {%for player in players%}
                   <option value="{{player.name}}">{{player.name}}</option>
                   {%endfor%}

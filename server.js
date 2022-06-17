@@ -10,6 +10,7 @@ const router = require("./controllers/postsC.js")
 const UserRouter = require("./controllers/userC.js");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const rowdy = require('rowdy-logger')
 
 /////////////////////////////////////////////////
 // Create our Express Application Object Bind Liquid Templating Engine
@@ -24,6 +25,9 @@ app.use(morgan("tiny")); //logging
 app.use(methodOverride("_method")); // override for put and delete requests from forms
 app.use(express.urlencoded({ extended: true })); // parse urlencoded request bodies
 app.use(express.static("public")); // serve files from public statically
+const rowdyResults = rowdy.begin(app)
+ 
+
 
 //Middleware to setup session
 app.use(
@@ -34,6 +38,7 @@ app.use(
       resave: false,
     })
   );
+
 
 ////////////////////////////////
 // connect router
@@ -52,5 +57,7 @@ app.get("/", (req, res) => {
 // Server Listener
 //////////////////////////////////////////////
 const PORT = process.env.PORT;
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000, function() {
+  rowdyResults.print()
+})
 

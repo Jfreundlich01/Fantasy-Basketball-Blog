@@ -8,6 +8,9 @@ A place where users can come and discuss the fantasy outlook of NBA players for 
 ## ERD
 ![ERD](public/images/ERD.png)
 
+## Routes
+![Routes](public/images/rowdy.png)
+
 ## User Story
 
 - Users should be able to create a unique account. 

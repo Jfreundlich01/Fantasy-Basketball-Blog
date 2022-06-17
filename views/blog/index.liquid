@@ -15,7 +15,8 @@
                     <div class="col-lg-10">
                         <!-- Nested row for non-featured blog posts-->
                         <div class="row">
-                            {%for post in posts%}
+                            {% assign posts_reversed = posts | reverse%}
+                            {%for post in posts_reversed %}
                             <div class="col-lg-6">
                                 <!-- Blog post-->
                                 <div class="index-card card mb-4">

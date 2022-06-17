@@ -1,6 +1,8 @@
-# Fantasy-Basketball-Blog
+# Fantasy-Basketball-ChatForum
 
 A place where users can come and discuss the fantasy outlook of NBA players for the 2022-2023 season
+
+Deployed on Heroku : https://fantasy-basketball-chatforum.herokuapp.com/home
 
 ## Wireframe
 ![Wireframe](public/images/Wireframe.png)
@@ -28,5 +30,6 @@ A place where users can come and discuss the fantasy outlook of NBA players for 
 - A tierbased title system. Where users earn special titles based on activity
 - like replies, and reply to replies. 
 - notification system 
+- change userprofile picture
 
 

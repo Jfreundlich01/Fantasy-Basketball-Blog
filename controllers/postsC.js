@@ -26,8 +26,6 @@ router.use((req, res, next) => {
 // Routes
 ////////////////////////////////////////////
 
-//user Profile
-
 ////// index route ///////////
 router.get("/", (req, res) => {
   let username = req.session.username;
@@ -43,6 +41,7 @@ router.get("/", (req, res) => {
     });
 });
 
+/////// Search bar /////////////
 router.get("/search/:playername", (req, res) => {
   let username = req.session.username;
   playername = req.params.playername;
@@ -67,12 +66,13 @@ router.post("/search/player", (req, res) => {
   res.redirect(`/home/search/${playername}`);
 });
 
+//////// Get Profile Page ////////////
 router.get("/profile", (req, res) => {
   let username = req.session.username;
   res.render("blog/profile", { username });
 });
 
-///// new  /////////////
+///// new post /////////////
 router.get("/new", (req, res) => {
   let username = req.session.username;
   Player.find({}).then((players) => {
@@ -81,7 +81,7 @@ router.get("/new", (req, res) => {
   });
 });
 
-////user
+////users profile page ///////////
 router.get("/user/:user", (req, res) => {
   let username = req.session.username;
   let user = req.params.user;
@@ -93,6 +93,7 @@ router.get("/user/:user", (req, res) => {
       res.render("blog/profile", { user, username });
     });
 });
+
 //////// Show ////////////////////
 router.get("/:id", (req, res) => {
   let username = req.session.username;
@@ -111,7 +112,8 @@ router.get("/:id", (req, res) => {
       res.render("blog/show", { post, username });
     });
 });
-//Create new Post route
+
+////// Create new Post route  //////////////
 router.post("/", (req, res) => {
   let username = req.session.username;
   let newPost = {
@@ -120,7 +122,6 @@ router.post("/", (req, res) => {
     postBody: req.body.postBody,
     postOwner: req.session.username,
   };
- 
   Post.create(newPost).then((data) => {
     Player.findOne({ name: req.body.name }).then((newplayer) => {
       data.player.push(newplayer);

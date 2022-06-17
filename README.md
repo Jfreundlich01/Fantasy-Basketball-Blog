@@ -18,3 +18,12 @@ A place where users can come and discuss the fantasy outlook of NBA players for 
 - Users should be able to reply to comments
 - Users should be able to view their own profile and see how many comments and posts they have
 - Users should be able to view other user's profile. 
+
+## Icebox
+
+- Pagination
+- A tierbased title system. Where users earn special titles based on activity
+- like replies, and reply to replies. 
+- notification system 
+
+

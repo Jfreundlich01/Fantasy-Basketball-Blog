@@ -45,36 +45,3 @@
 
 {%endblock%}
 
-
-
-{% comment %} <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-      <form action="/home" method="POST">
-        <fieldset>
-          <legend>Create a New Post</legend>
-          <label>
-            Player:
-            <select id="players" name="name">
-                {%for player in players%}
-                <option value="{{player.name}}">{{player.name}}</option>
-                {%endfor%}
-            </select>
-          </label>
-          <label for="post"></label>
-          <textarea id="post" name="postBody" rows="4" cols="50" value="Write your post here!"></textarea>
-        </fieldset>
-        <input type="submit" value="Post"/>
-        <a href="/home">Back</a>
-      </form>
-    </div>
-</body>
-</html> {% endcomment %}
-

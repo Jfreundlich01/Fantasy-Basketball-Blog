@@ -32,7 +32,7 @@
                       <!-- Post content-->
                       <article>
                           <!-- Post header-->
-                          <a type="button" class="btn btn-outline-warning btn-sm" href="/home">Back</a>
+                          <a type="button" class="btn btn-outline-warning btn-sm" href="/home{{post._id}}">Back</a>
                           <header class="mb-4">
                               <!-- Post title-->
                               <h1 class="fw-bolder mb-1">{{post.title}}</h1>
@@ -52,8 +52,7 @@
                               <label for="post"></label>
                               <textarea id="post" name="postBody" rows="4" cols="50" value="">{{post.postBody}}</textarea>
                             </fieldset>
-                            <input type="submit" value="Submit Edits"/>
-                            <a href="/home/{{post._id}}">Back</a>
+                            <input type="submit" class="btn btn-primary btn-sm" value="Submit Edits"/>
                           </form>
                       </article>
                   </div>
@@ -70,19 +69,5 @@
       </body>
   </html>
 
-{% comment %} <div>
-          <form action="/home/{{post._id}}?_method=PUT" method="POST">
-            <fieldset>
-              <legend>Edit Post</legend>
-              <label>
-                Player: {{post.name}}
-              </label>
-              <label for="post"></label>
-              <textarea id="post" name="postBody" rows="4" cols="50" value="">{{post.postBody}}</textarea>
-            </fieldset>
-            <input type="submit" value="Submit Edits"/>
-            <a href="/home/{{post._id}}">Back</a>
-          </form>
-        </div> {% endcomment %}
 
     

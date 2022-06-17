@@ -110,13 +110,6 @@ router.get("/:id", (req, res) => {
     .exec(function (err, post) {
       res.render("blog/show", { post, username });
     });
-  // .then((post) => {
-  //   res.render("blog/show", {post,username});
-  //   //console.log(post)
-  // })
-  // .catch((error) =>{
-  //     res.json({error})
-  // });
 });
 //Create new Post route
 router.post("/", (req, res) => {
@@ -127,9 +120,7 @@ router.post("/", (req, res) => {
     postBody: req.body.postBody,
     postOwner: req.session.username,
   };
-  //console.log(newPost.player)
-  // console.log(playerId)
-  //console.log(req.body)
+ 
   Post.create(newPost).then((data) => {
     Player.findOne({ name: req.body.name }).then((newplayer) => {
       data.player.push(newplayer);
@@ -200,20 +191,8 @@ router.put("/:postid/:commentid/like", (req, res) => {
   );
 });
 
-// // reply to Comment //////// This works with no access to user info
-// router.put("/:postid/:commentid/reply", (req,res) => {
-//   const commentid = req.params.commentid
-//   const postid = req.params.postid
-//   const reply = {
-//     replyOwner: req.session.username,
-//     replyBody: req.body.replyBody
-//   }
-//   Comment.findOneAndUpdate({_id: commentid}, {$push: {replies: reply}})
-//         .then((reply) =>{
-//           res.redirect(`/home/${postid}`)
-//         })
-// })
 
+////// reply to comment ////////////////
 router.post("/:postid/:commentid/reply", (req, res) => {
   const postid = req.params.postid
   const commentid = req.params.commentid
